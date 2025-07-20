@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./home.module.css";
-import { imgArrType } from "../../helps/interfaces";
 import { useNavigate } from "react-router-dom";
+import type { imgArrType } from "../../helps/interfaces";
 export default function HomeSectionUpperSection() {
   const imgArr: imgArrType[] = [
     { name: "firstFoto", url: "/Foto/homePhoto/lapOne.webp" },
     { name: "secondFoto", url: "/Foto/homePhoto/lapTwo.jpg" },
     { name: "thirdFoto", url: "/Foto/homePhoto/lapThree.jpg" },
-    { name: "FourthFoto", url: "/Foto/homePhoto/lapFour.webp" }
+    { name: "FourthFoto", url: "/Foto/homePhoto/lapFour.webp" },
   ];
   const navigate = useNavigate();
   return (
