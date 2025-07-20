@@ -6,7 +6,7 @@ export default function AboutUsContact() {
   return (
     <div className={styles.aboutUsContactSection}>
       <img
-        src="https://amplify-computer-deployment.s3.amazonaws.com/foto/aboutUs
+        src="https://amplify-computer-deployment.s3.amazonaws.com/foto/aboutUs/
 aboutUsThree.jpg"
         alt="non foto"
       />{" "}
