@@ -4,7 +4,11 @@ export default function AboutUsImgContainer() {
   return (
     <div className={styles.aboutUsUpperContainer}>
       <div className={styles.aboutUsImgContainer}>
-        <img src="/Foto/aboutUs.jpg" alt="not found" />
+        <img
+          src="https://amplify-computer-deployment.s3.amazonaws.com/foto/aboutUs
+/aboutUs.jpg"
+          alt="not found"
+        />{" "}
       </div>
       <div className={styles.aboutUsUpperContainerHeader}>
         <h1>Profitable and circular: </h1>
@@ -38,7 +42,11 @@ export default function AboutUsImgContainer() {
           </p>
         </div>
         <div className={styles.aboutUsMiddleSectionImg}>
-          <img src="/Foto/aboutUsTwo.jpeg" alt="not found" />
+          <img
+            src="https://amplify-computer-deployment.s3.amazonaws.com/foto/aboutUs
+/aboutUsTwo.jpeg"
+            alt="not found"
+          />{" "}
         </div>
       </div>
     </div>

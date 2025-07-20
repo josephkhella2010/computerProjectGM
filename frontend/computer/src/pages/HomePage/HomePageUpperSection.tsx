@@ -3,10 +3,22 @@ import { useNavigate } from "react-router-dom";
 import type { imgArrType } from "../../helps/interfaces";
 export default function HomeSectionUpperSection() {
   const imgArr: imgArrType[] = [
-    { name: "firstFoto", url: "/Foto/homePhoto/lapOne.webp" },
-    { name: "secondFoto", url: "/Foto/homePhoto/lapTwo.jpg" },
-    { name: "thirdFoto", url: "/Foto/homePhoto/lapThree.jpg" },
-    { name: "FourthFoto", url: "/Foto/homePhoto/lapFour.webp" },
+    {
+      name: "firstFoto",
+      url: "https://amplify-computer-deployment.s3.amazonaws.com/foto/home/lapOne.webp",
+    },
+    {
+      name: "secondFoto",
+      url: "https://amplify-computer-deployment.s3.amazonaws.com/foto/home/lapTwo.jpg",
+    },
+    {
+      name: "thirdFoto",
+      url: "https://amplify-computer-deployment.s3.amazonaws.com/foto/home/lapThree.jpg",
+    },
+    {
+      name: "FourthFoto",
+      url: "https://amplify-computer-deployment.s3.amazonaws.com/foto/home/lapFour.webp",
+    },
   ];
   const navigate = useNavigate();
   return (

@@ -4,22 +4,22 @@ import type { ActivityType } from "../../../helps/interfaces";
 export default function AboutUsActiveSectionPage() {
   const activityArr: ActivityType[] = [
     {
-      url: "/Foto/activeOne.jpg",
+      url: "https://amplify-computer-deployment.s3.amazonaws.com/foto/aboutUs/activeOne.jpg",
       header: "Buy",
       text: "We buy products directly from consumers for immediate (cash) money.",
     },
     {
-      url: "/Foto/activeTwo.jpg",
+      url: "https://amplify-computer-deployment.s3.amazonaws.com/foto/aboutUs/activeTwo.jpg",
       header: "Sell",
       text: "We sell these products in our stores and on our webshops. Products are sold with warranty and service.",
     },
     {
-      url: "/Foto/activeThree.jpg",
+      url: "https://amplify-computer-deployment.s3.amazonaws.com/foto/aboutUs/activeThree.jpg",
       header: "Buyback (Pawn)",
       text: "Temporary financial solutions for customers: pawn your item for immediate (cash) money and buy it back later with interest.",
     },
     {
-      url: "/Foto/activeFour.jpeg",
+      url: "https://amplify-computer-deployment.s3.amazonaws.com/foto/aboutUs/activeFour.jpeg",
       header: "Trade-in",
       text: "Buy a product from our store, sell your old one and pay a little extra. Also that is possible!",
     },
