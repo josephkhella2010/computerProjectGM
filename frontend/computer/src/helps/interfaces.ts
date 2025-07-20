@@ -19,6 +19,6 @@ export interface productsType {
   finalPrice: number;
 }
 
-ACCESS_KEY_ID = AKIA2666E3INWTB37PO2;
+/* ACCESS_KEY_ID = AKIA2666E3INWTB37PO2;
 SECRET_ACCESS_KEY = aRKY9LGFpBp9n3MurJYMVxo + cayI5sHWeMecw7Jg;
-REGION = us - east - 1;
+REGION = us - east - 1; */
