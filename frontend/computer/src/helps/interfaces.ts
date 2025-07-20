@@ -14,9 +14,7 @@ export interface productsType {
   name: string;
   description: string; // Ensure this matches your JSON
   price: number;
-  discount: number;
   imgs: string[];
-  finalPrice: number;
 }
 
 /* ACCESS_KEY_ID = AKIA2666E3INWTB37PO2;
