@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./contactUs.module.css";
 export default function ContactUsUpperSection() {
   return (

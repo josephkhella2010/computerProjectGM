@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./home.module.css";
 import HomeSectionUpperSection from "./HomePageUpperSection";
 import HomePageSectionTwo from "./HomePageSectionTwo";

@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./home.module.css";
 import { useNavigate } from "react-router-dom";
 import type { imgArrType } from "../../helps/interfaces";

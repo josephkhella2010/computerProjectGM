@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import DesktopNavigation from "./childComponent/DesktopNavigation";
 import MobileNavBar from "./childComponent/MobileNavBar";
 

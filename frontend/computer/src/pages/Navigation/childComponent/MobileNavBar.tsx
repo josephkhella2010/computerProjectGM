@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../Navigation.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { BiArrowBack } from "react-icons/bi";
@@ -27,26 +27,31 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
   return (
     <div className={styles.MainNavBar}>
       <div
-        className={`${styles.mobileNavBar} ${isScroll ? styles.scrolled : ""}`}>
+        className={`${styles.mobileNavBar} ${isScroll ? styles.scrolled : ""}`}
+      >
         <img src="/logo.svg" alt="not Found" onClick={() => navigate("/")} />
         <div
           className={`${styles.hamMenu} ${addClassActive}`}
-          onClick={() => setShowMenu(!showMenu)}>
+          onClick={() => setShowMenu(!showMenu)}
+        >
           <div className={`${styles.line}`}></div>
           <div className={`${styles.line} `}></div>
         </div>
         <div
           className={`${styles.mobileOverLay} ${addClassShow} `}
-          onClick={() => setShowMenu(!showMenu)}>
+          onClick={() => setShowMenu(!showMenu)}
+        >
           <div
             onClick={(e) => e.stopPropagation()}
-            className={`${styles.sideMenu} `}>
+            className={`${styles.sideMenu} `}
+          >
             <div
               className={styles.backDiv}
               onClick={() => {
                 setShowMenu(false);
                 setIsScroll(true);
-              }}>
+              }}
+            >
               <BiArrowBack className={styles.backIcon} />
               <p>Back</p>
             </div>

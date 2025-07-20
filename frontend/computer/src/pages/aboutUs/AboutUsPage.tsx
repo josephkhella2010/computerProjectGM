@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./aboutUs.module.css";
 import AboutUsImgContainer from "./childComponent/AboutUsImgContainer";
 import AboutUsActiveSectionPage from "./childComponent/AboutUsActiveSection";

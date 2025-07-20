@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./contactUs.module.css";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { IoChatbubbles } from "react-icons/io5";
