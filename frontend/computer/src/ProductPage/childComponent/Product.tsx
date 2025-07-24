@@ -40,7 +40,6 @@ export default function Products() {
       console.log(error);
     }
   }
-  console.log(productsData);
   useEffect(() => {
     fetchGetProducts();
   }, []);
