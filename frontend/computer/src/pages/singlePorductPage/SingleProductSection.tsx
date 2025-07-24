@@ -113,7 +113,9 @@ export default function SingleProductSection() {
   // Fetch all products when component mounts  async function fetchGetProducts() {
   async function fetchGetProducts() {
     try {
-      const response = await axios.get("http://localhost:3000/api/products");
+      const response = await axios.get(
+        "https://uat2pryfie.us-east-1.awsapprunner.com/api/products"
+      );
       const { products } = response.data;
       dispatch(setComputerData(products));
     } catch (error) {
