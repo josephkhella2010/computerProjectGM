@@ -114,7 +114,7 @@ export default function Products() {
       filteredProduct.sort((a, b) => (a.price ?? 0) - (b.price ?? 0));
     }
 
-    //setProducts(filteredProduct);
+    setProducts(filteredProduct);
     setCurrentPage(1);
     setStartPage(1);
   }
