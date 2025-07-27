@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "../product.module.css";
 import type { productsType } from "../../helps/interfaces";
+
 interface Props {
   index: number;
   item: productsType;

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-
 import styles from "./singleProduct.module.css";
 import type { productsType } from "../../helps/interfaces";
 import type { RootState } from "../../store/store";
