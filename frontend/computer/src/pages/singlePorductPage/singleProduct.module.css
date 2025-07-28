@@ -106,11 +106,9 @@ margin-bottom: 20px;
   -moz-transition: left 0.75s linear;
   -ms-transition: left 0.75s linear;
   -o-transition: left 0.75s linear;
-  /*   opacity: 0;
- */
+  opacity: 0;
 }
 .animationClass {
   left: 0;
-  /*   opacity: 1;
- */
+  opacity: 1;
 }
