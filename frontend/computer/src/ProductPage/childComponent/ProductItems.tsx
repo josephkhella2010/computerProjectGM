@@ -21,7 +21,7 @@ export default function ProductItems({ item }: Props) {
         <div>
           <p className={`${styles.price}`}>
             {" "}
-            Price is:{"  "}
+            Price :{"  "}
             <span className={`${styles.throwLineClass}`}>{price} $</span>
           </p>
         </div>

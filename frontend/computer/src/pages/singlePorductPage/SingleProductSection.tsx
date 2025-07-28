@@ -94,7 +94,7 @@ export default function SingleProductSection() {
             <h6>{singleProduct?.description}</h6>
             <p className={`${styles.price}`}>
               {" "}
-              Price is:{"  "}
+              Price:{"  "}
               <span className={`${styles.throwLineClass}`}>
                 {singleProduct?.price} $
               </span>
