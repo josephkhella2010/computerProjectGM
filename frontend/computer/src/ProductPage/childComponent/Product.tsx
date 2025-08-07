@@ -19,6 +19,7 @@ export default function Products() {
   const [searchVal, setSearchVal] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const [dropDownVal, setDropDownVal] = useState<string>("Choose price");
+  /*  */
   const priceFilterArr: filterArrType[] = [
     { label: "Cheaper", value: "Cheaper" },
     { label: "Expensive", value: "Expensive" },
