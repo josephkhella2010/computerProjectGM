@@ -9,7 +9,6 @@ import ProductItems from "./ProductItems";
 import type { productsType } from "../../helps/interfaces";
 import axios from "axios";
 import { setComputerData } from "../../ReduxSlice/ProductSlice";
-import { DiVim } from "react-icons/di";
 
 export interface filterArrType {
   label: string;
