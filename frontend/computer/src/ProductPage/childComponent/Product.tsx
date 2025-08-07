@@ -9,6 +9,7 @@ import ProductItems from "./ProductItems";
 import type { productsType } from "../../helps/interfaces";
 import axios from "axios";
 import { setComputerData } from "../../ReduxSlice/ProductSlice";
+import { DiVim } from "react-icons/di";
 
 export interface filterArrType {
   label: string;
@@ -17,7 +18,7 @@ export interface filterArrType {
 export default function Products() {
   const [products, setProducts] = useState<productsType[]>([]);
   const [searchVal, setSearchVal] = useState<string>("");
-
+  const [loading, setLoading] = useState<boolean>(false);
   const [dropDownVal, setDropDownVal] = useState<string>("Choose price");
   const priceFilterArr: filterArrType[] = [
     { label: "Cheaper", value: "Cheaper" },
@@ -30,6 +31,7 @@ export default function Products() {
   );
   async function fetchGetProducts() {
     try {
+      setLoading(true);
       const response = await axios.get(
         "https://backendcomputer.onrender.com/api/products"
       );
@@ -38,6 +40,8 @@ export default function Products() {
       setProducts(products);
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);
     }
   }
   useEffect(() => {
@@ -131,70 +135,78 @@ export default function Products() {
   }
 
   return (
-    <div className={styles.productMainContainer}>
-      <div className={styles.filterSection}>
-        <div className={styles.searchBar}>
-          <input
-            type="text"
-            placeholder="search"
-            value={searchVal}
-            onChange={(e) => handleSearch(e)}
-          />
-          <CiSearch />
-        </div>
-        <div>
-          <DropDownSection
-            priceFilterArr={priceFilterArr}
-            dropDownVal={dropDownVal}
-            handleValue={handleValue}
-          />
-        </div>
-      </div>
-      <div className={styles.ProductContainer}>
-        {SlicedProductArr &&
-          SlicedProductArr.map((item, index) => {
-            return (
-              <ProductItems
-                item={item}
-                index={startIndex + index}
-                key={index}
+    <>
+      {loading ? (
+        <div>loading</div>
+      ) : (
+        <div className={styles.productMainContainer}>
+          <div className={styles.filterSection}>
+            <div className={styles.searchBar}>
+              <input
+                type="text"
+                placeholder="search"
+                value={searchVal}
+                onChange={(e) => handleSearch(e)}
               />
-            );
-          })}
-      </div>
-      {/* Pagination */}
-      <div className={styles.paginationContainer}>
-        <button
-          onClick={handlePrevious}
-          disabled={currentPage === 1}
-          className={styles.prevBtn}
-        >
-          <MdKeyboardArrowLeft />
-        </button>
-
-        {/* Show visible pages */}
-        <div className={styles.paginationPages}>
-          {visiblePages.map((page) => (
+              <CiSearch />
+            </div>
+            <div>
+              <DropDownSection
+                priceFilterArr={priceFilterArr}
+                dropDownVal={dropDownVal}
+                handleValue={handleValue}
+              />
+            </div>
+          </div>
+          <div className={styles.ProductContainer}>
+            {SlicedProductArr &&
+              SlicedProductArr.map((item, index) => {
+                return (
+                  <ProductItems
+                    item={item}
+                    index={startIndex + index}
+                    key={index}
+                  />
+                );
+              })}
+          </div>
+          {/* Pagination */}
+          <div className={styles.paginationContainer}>
             <button
-              key={page}
-              onClick={() => changePage(page)}
-              className={
-                currentPage === page ? styles.activeBtn : styles.disActiveBtn
-              }
+              onClick={handlePrevious}
+              disabled={currentPage === 1}
+              className={styles.prevBtn}
             >
-              {page}
+              <MdKeyboardArrowLeft />
             </button>
-          ))}
-        </div>
 
-        <button
-          onClick={handleNext}
-          disabled={currentPage === totalPages}
-          className={styles.nextBtn}
-        >
-          <MdKeyboardArrowRight />
-        </button>
-      </div>
-    </div>
+            {/* Show visible pages */}
+            <div className={styles.paginationPages}>
+              {visiblePages.map((page) => (
+                <button
+                  key={page}
+                  onClick={() => changePage(page)}
+                  className={
+                    currentPage === page
+                      ? styles.activeBtn
+                      : styles.disActiveBtn
+                  }
+                >
+                  {page}
+                </button>
+              ))}
+            </div>
+
+            <button
+              onClick={handleNext}
+              disabled={currentPage === totalPages}
+              className={styles.nextBtn}
+            >
+              <MdKeyboardArrowRight />
+            </button>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
