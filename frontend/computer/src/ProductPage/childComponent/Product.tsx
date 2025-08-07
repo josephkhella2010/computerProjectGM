@@ -47,6 +47,7 @@ export default function Products() {
   useEffect(() => {
     fetchGetProducts();
   }, []);
+  console.log(loading);
 
   /* useEffect(() => {
     setProducts(productsData);
@@ -137,7 +138,9 @@ export default function Products() {
   return (
     <>
       {loading ? (
-        <div>loading</div>
+        <div className={styles.loadingSection}>
+          <h1>Loading ...</h1>
+        </div>
       ) : (
         <div className={styles.productMainContainer}>
           <div className={styles.filterSection}>
