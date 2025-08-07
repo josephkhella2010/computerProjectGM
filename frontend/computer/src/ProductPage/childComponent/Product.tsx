@@ -31,7 +31,7 @@ export default function Products() {
   async function fetchGetProducts() {
     try {
       const response = await axios.get(
-        "https://q3khkdi9fh.us-east-1.awsapprunner.com/api/products"
+        "https://backendcomputer.onrender.com/api/products"
       );
       const { products } = response.data;
       dispatch(setComputerData(products));
