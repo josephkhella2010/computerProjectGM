@@ -239,6 +239,35 @@
   justify-content: center;
   align-items: center;
 }
+.clock {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: black;
+  transform-origin: center center;
+  animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+  0%,
+  80%,
+  100% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+
 /*  */
 @media screen and (max-width: 950px) {
   .productMainContainer {

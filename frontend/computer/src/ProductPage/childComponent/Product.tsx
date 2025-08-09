@@ -59,6 +59,11 @@ export default function Products() {
   const visibleCard: number = 6;
   const showPagesNumber = 3;
   const [startPage, setStartPage] = useState(1);
+  const dots = 12;
+  function dotsArray() {
+    const arr = Array.from({ length: dots }, (_, i) => i);
+    return arr;
+  }
 
   // **Apply filtering first, then slice**
   const filteredProducts = products;
@@ -139,7 +144,25 @@ export default function Products() {
     <>
       {loading ? (
         <div className={styles.loadingSection}>
-          <h1>Loading ...</h1>
+          <h1>Loading </h1>
+          <div className={styles.clock}>
+            <div className={styles.spinner}>
+              {dotsArray().map((item) => {
+                const angle = (360 / dots) * item;
+                const delay = (item * 0.1).toFixed(1);
+                return (
+                  <span
+                    key={item}
+                    className={styles.circle}
+                    style={{
+                      transform: `rotate(${angle}deg) translateY(-20px) rotate(-${angle}deg)`,
+                      animationDelay: `${delay}s`,
+                    }}
+                  ></span>
+                );
+              })}
+            </div>
+          </div>
         </div>
       ) : (
         <div className={styles.productMainContainer}>
