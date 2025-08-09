@@ -16,6 +16,9 @@ export interface productsType {
   price: number;
   imgs: string[];
 }
+export interface LoadingType {
+  isLoading: boolean;
+}
 
 /* ACCESS_KEY_ID = AKIA2666E3INWTB37PO2;
 SECRET_ACCESS_KEY = aRKY9LGFpBp9n3MurJYMVxo + cayI5sHWeMecw7Jg;

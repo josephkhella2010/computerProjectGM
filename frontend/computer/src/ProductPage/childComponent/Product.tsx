@@ -9,6 +9,7 @@ import ProductItems from "./ProductItems";
 import type { productsType } from "../../helps/interfaces";
 import axios from "axios";
 import { setComputerData } from "../../ReduxSlice/ProductSlice";
+import { setIsLoading } from "../../ReduxSlice/LoadingSlice";
 
 export interface filterArrType {
   label: string;
@@ -17,7 +18,8 @@ export interface filterArrType {
 export default function Products() {
   const [products, setProducts] = useState<productsType[]>([]);
   const [searchVal, setSearchVal] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(false);
+  //  const [loading, setLoading] = useState<boolean>(false);
+
   const [dropDownVal, setDropDownVal] = useState<string>("Choose price");
   /*  */
   const priceFilterArr: filterArrType[] = [
@@ -29,9 +31,13 @@ export default function Products() {
   const productsData = useSelector(
     (state: RootState) => state.computerData.computerData || []
   );
+  const { isLoading } = useSelector(
+    (state: RootState) => state.isLoadingReducer
+  );
+  console.log(isLoading);
   async function fetchGetProducts() {
     try {
-      setLoading(true);
+      dispatch(setIsLoading(true));
       const response = await axios.get(
         "https://backendcomputer.onrender.com/api/products"
       );
@@ -41,13 +47,13 @@ export default function Products() {
     } catch (error) {
       console.log(error);
     } finally {
-      setLoading(false);
+      dispatch(setIsLoading(false));
+      // setLoading(false);
     }
   }
   useEffect(() => {
     fetchGetProducts();
   }, []);
-  console.log(loading);
 
   /* useEffect(() => {
     setProducts(productsData);
@@ -142,7 +148,7 @@ export default function Products() {
 
   return (
     <>
-      {loading ? (
+      {isLoading ? (
         <div className={styles.loadingSection}>
           <h1>Loading </h1>
           <div className={styles.clock}>

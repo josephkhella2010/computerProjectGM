@@ -31,8 +31,14 @@ import AboutUsPage from "../aboutUs/AboutUsPage";
 import Footer from "../footer/Footer";
 import ProductSection from "../../ProductPage/ProductSection";
 import SingleProductSection from "../singlePorductPage/SingleProductSection";
+import { useSelector } from "react-redux";
+import type { RootState } from "../../store/store";
 
 export default function RouterPage() {
+  const { isLoading } = useSelector(
+    (state: RootState) => state.isLoadingReducer
+  );
+
   return (
     <Router>
       <NavigationSection />
@@ -43,7 +49,7 @@ export default function RouterPage() {
         <Route path="/product" element={<ProductSection />} />
         <Route path="/product/:id" element={<SingleProductSection />} />
       </Routes>
-      <Footer />
+      {!isLoading && <Footer />}
     </Router>
   );
 }
