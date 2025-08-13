@@ -8,12 +8,12 @@ interface Props {
 }
 
 export default function ProductItems({ item }: Props) {
-  const { id, url, name, price, description } = item;
+  const { id, imgs, name, price, description } = item;
 
   return (
     <div className={styles.productItemContent}>
       <div className={styles.productImgContent}>
-        <img src={url} alt={name}></img>
+        <img src={imgs[0]} alt={name}></img>
       </div>
       <div className={styles.productTextContent}>
         <h3>{name}</h3>
