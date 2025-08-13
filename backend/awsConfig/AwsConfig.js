@@ -15,7 +15,7 @@ const ddbDocClient = DynamoDBDocumentClient.from(ddbClient);
 
 module.exports = { ddbDocClient };
  */ // AwsConfig.js
-
+/* 
 const { DynamoDBClient } = require("@aws-sdk/client-dynamodb");
 const { DynamoDBDocumentClient } = require("@aws-sdk/lib-dynamodb");
 require("dotenv").config();
@@ -37,3 +37,4 @@ console.log("REGION:", process.env.REGION);
 const ddbDocClient = DynamoDBDocumentClient.from(client);
 
 module.exports = { ddbDocClient };
+ */

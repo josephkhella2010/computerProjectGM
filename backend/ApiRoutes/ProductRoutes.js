@@ -1,6 +1,6 @@
 // ProductRoutes.js
 
-const express = require("express");
+/* const express = require("express");
 const router = express.Router();
 const { findAllProducts } = require("../awsDynamoDBFunctions/DynamoDBFunction");
 
@@ -14,4 +14,4 @@ router.get("/api/products", async (req, res) => {
   }
 });
 
-module.exports = router;
+module.exports = router; */

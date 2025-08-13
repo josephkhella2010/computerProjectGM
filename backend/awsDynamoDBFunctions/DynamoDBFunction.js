@@ -16,7 +16,7 @@ module.exports = {
   findAllProducts,
 }; */
 // DynamoDBFunction.js
-
+/* 
 const { ddbDocClient } = require("../awsConfig/AwsConfig");
 const { ScanCommand } = require("@aws-sdk/lib-dynamodb");
 require("dotenv").config();
@@ -40,3 +40,4 @@ async function findAllProducts() {
 module.exports = {
   findAllProducts,
 };
+ */
