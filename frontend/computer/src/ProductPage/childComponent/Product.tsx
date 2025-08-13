@@ -39,7 +39,7 @@ export default function Products() {
     try {
       dispatch(setIsLoading(true));
       const response = await axios.get(
-        "https://backendcomputer.onrender.com/api/products"
+        "https://computergmbackend.onrender.com/api/products"
       );
       const { products } = response.data;
       dispatch(setComputerData(products));
