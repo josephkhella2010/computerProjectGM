@@ -11,7 +11,7 @@ export default function ContactUsUpperSection() {
             reach us{" "}
           </p>
         </div>
-        <img src="https://amplify-computer-deployment.s3.amazonaws.com/foto/contactUs.webp" />
+        <img src="Foto/contactUs.webp" />
       </div>
     </div>
   );

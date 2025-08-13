@@ -3,10 +3,7 @@ export default function ContactUsBottomSection() {
   return (
     <div className={styles.contactUsBottomSection}>
       <div className={styles.contactUsBottomInnerSection}>
-        <img
-          src="https://amplify-computer-deployment.s3.amazonaws.com/foto/map.png"
-          alt="no foto"
-        />{" "}
+        <img src="Foto/map.png" alt="no foto" />{" "}
         <div className={styles.contactUsBottomInnerSectionText}>
           <p>
             <a

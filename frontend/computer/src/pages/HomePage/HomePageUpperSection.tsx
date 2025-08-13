@@ -2,7 +2,7 @@ import styles from "./home.module.css";
 import { useNavigate } from "react-router-dom";
 import type { imgArrType } from "../../helps/interfaces";
 export default function HomeSectionUpperSection() {
-  const imgArr: imgArrType[] = [
+  /* const imgArr: imgArrType[] = [
     {
       name: "firstFoto",
       url: "https://amplify-computer-deployment.s3.amazonaws.com/foto/home/lapOne.webp",
@@ -18,6 +18,24 @@ export default function HomeSectionUpperSection() {
     {
       name: "FourthFoto",
       url: "https://amplify-computer-deployment.s3.amazonaws.com/foto/home/lapFour.webp",
+    },
+  ]; */
+  const imgArr: imgArrType[] = [
+    {
+      name: "firstFoto",
+      url: "/Foto/homePhoto/lapOne.webp",
+    },
+    {
+      name: "secondFoto",
+      url: "/Foto/homePhoto/lapTwo.jpg",
+    },
+    {
+      name: "thirdFoto",
+      url: "/Foto/homePhoto/lapThree.jpg",
+    },
+    {
+      name: "FourthFoto",
+      url: "/Foto/homePhoto/lapFour.webp",
     },
   ];
   const navigate = useNavigate();
