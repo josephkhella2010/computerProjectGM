@@ -9,7 +9,6 @@ interface Props {
 
 export default function ProductItems({ item }: Props) {
   const { id, imgs, name, price, description } = item;
-
   return (
     <div className={styles.productItemContent}>
       <div className={styles.productImgContent}>
