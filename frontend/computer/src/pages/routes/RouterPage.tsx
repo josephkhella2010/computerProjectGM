@@ -23,7 +23,12 @@ export default function RouterPage() {
   );
 }
  */
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import HomeSection from "../HomePage/HomeSection";
 import NavigationSection from "../Navigation/NavigationSection";
 import ContactUsPage from "../ContactUs/ContactUsPage";
@@ -31,16 +36,19 @@ import AboutUsPage from "../aboutUs/AboutUsPage";
 import Footer from "../footer/Footer";
 import ProductSection from "../../ProductPage/ProductSection";
 import SingleProductSection from "../singlePorductPage/SingleProductSection";
+import LoadingSection from "../LoadingPage/LoadingSection";
 import { useSelector } from "react-redux";
 import type { RootState } from "../../store/store";
 
-export default function RouterPage() {
+function AppRoutes() {
+  const location = useLocation();
   const { isLoading } = useSelector(
     (state: RootState) => state.isLoadingReducer
   );
+  const currentPath = isLoading ? "/loading" : location.pathname;
 
   return (
-    <Router>
+    <>
       <NavigationSection />
       <Routes>
         <Route path="/" element={<HomeSection />} />
@@ -48,8 +56,17 @@ export default function RouterPage() {
         <Route path="/aboutUs" element={<AboutUsPage />} />
         <Route path="/product" element={<ProductSection />} />
         <Route path="/product/:id" element={<SingleProductSection />} />
+        <Route path="/loading" element={<LoadingSection />} />
       </Routes>
-      {!isLoading && <Footer />}
+      {currentPath !== "/loading" ? <Footer /> : null}
+    </>
+  );
+}
+
+export default function RouterPage() {
+  return (
+    <Router>
+      <AppRoutes />
     </Router>
   );
 }

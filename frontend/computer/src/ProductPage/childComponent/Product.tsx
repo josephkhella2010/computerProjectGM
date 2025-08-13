@@ -10,6 +10,7 @@ import type { productsType } from "../../helps/interfaces";
 import axios from "axios";
 import { setComputerData } from "../../ReduxSlice/ProductSlice";
 import { setIsLoading } from "../../ReduxSlice/LoadingSlice";
+import LoadingSection from "../../pages/LoadingPage/LoadingSection";
 
 export interface filterArrType {
   label: string;
@@ -18,8 +19,6 @@ export interface filterArrType {
 export default function Products() {
   const [products, setProducts] = useState<productsType[]>([]);
   const [searchVal, setSearchVal] = useState<string>("");
-  //  const [loading, setLoading] = useState<boolean>(false);
-
   const [dropDownVal, setDropDownVal] = useState<string>("Choose price");
   /*  */
   const priceFilterArr: filterArrType[] = [
@@ -34,9 +33,10 @@ export default function Products() {
   const { isLoading } = useSelector(
     (state: RootState) => state.isLoadingReducer
   );
-  console.log(isLoading);
+
   async function fetchGetProducts() {
     try {
+      //dispatch(setIsLoading(true));
       dispatch(setIsLoading(true));
       const response = await axios.get(
         "https://computergmbackend.onrender.com/api/products"
@@ -47,8 +47,8 @@ export default function Products() {
     } catch (error) {
       console.log(error);
     } finally {
-      dispatch(setIsLoading(false));
-      // setLoading(false);
+      dispatch(setIsLoading(false)); // sets loading to false
+      //setLoading(false);
     }
   }
   useEffect(() => {
@@ -65,11 +65,6 @@ export default function Products() {
   const visibleCard: number = 6;
   const showPagesNumber = 3;
   const [startPage, setStartPage] = useState(1);
-  const dots = 12;
-  function dotsArray() {
-    const arr = Array.from({ length: dots }, (_, i) => i);
-    return arr;
-  }
 
   // **Apply filtering first, then slice**
   const filteredProducts = products;
@@ -145,31 +140,10 @@ export default function Products() {
     setSearchVal(newVal);
     filterSection(newVal, dropDownVal);
   }
-
   return (
     <>
       {isLoading ? (
-        <div className={styles.loadingSection}>
-          <h1>Loading </h1>
-          <div className={styles.clock}>
-            <div className={styles.spinner}>
-              {dotsArray().map((item) => {
-                const angle = (360 / dots) * item;
-                const delay = (item * 0.1).toFixed(1);
-                return (
-                  <span
-                    key={item}
-                    className={styles.circle}
-                    style={{
-                      transform: `rotate(${angle}deg) translateY(-20px) rotate(-${angle}deg)`,
-                      animationDelay: `${delay}s`,
-                    }}
-                  ></span>
-                );
-              })}
-            </div>
-          </div>
-        </div>
+        <LoadingSection />
       ) : (
         <div className={styles.productMainContainer}>
           <div className={styles.filterSection}>
