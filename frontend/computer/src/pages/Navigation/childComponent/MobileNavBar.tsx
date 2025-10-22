@@ -59,12 +59,18 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
               <li onClick={() => setShowMenu(false)}>
                 <Link to="/aboutUs">About us</Link>
               </li>
-              <li onClick={() => setShowMenu(false)}>
-                <Link to="/product">Our Products</Link>
-              </li>
+
               <li onClick={() => setShowMenu(false)}>
                 <Link to="/contactUs">Contact Us</Link>
               </li>
+              <button
+                onClick={() => setShowMenu(false)}
+                className={styles.recycleBtnMobile}
+              >
+                <Link to="/recycle" className={styles.recycleBtnMobileLink}>
+                  Recycle Now
+                </Link>
+              </button>
             </ul>
           </div>
         </div>

@@ -2,24 +2,6 @@ import styles from "./home.module.css";
 import { useNavigate } from "react-router-dom";
 import type { imgArrType } from "../../helps/interfaces";
 export default function HomeSectionUpperSection() {
-  /* const imgArr: imgArrType[] = [
-    {
-      name: "firstFoto",
-      url: "https://amplify-computer-deployment.s3.amazonaws.com/foto/home/lapOne.webp",
-    },
-    {
-      name: "secondFoto",
-      url: "https://amplify-computer-deployment.s3.amazonaws.com/foto/home/lapTwo.jpg",
-    },
-    {
-      name: "thirdFoto",
-      url: "https://amplify-computer-deployment.s3.amazonaws.com/foto/home/lapThree.jpg",
-    },
-    {
-      name: "FourthFoto",
-      url: "https://amplify-computer-deployment.s3.amazonaws.com/foto/home/lapFour.webp",
-    },
-  ]; */
   const imgArr: imgArrType[] = [
     {
       name: "firstFoto",

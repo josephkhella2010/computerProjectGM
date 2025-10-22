@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 682.667 682.667" width="512" height="512" role="img" aria-label="Mail Connection Icon">
+<g>
+<defs>
+<clipPath id="a" clipPathUnits="userSpaceOnUse">
+<path d="M0 512h512V0H0Z" fill="#00aeef" opacity="1"></path>
+</clipPath>
+</defs>
+<g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 682.667)">
+<path d="m0 0 105.002-105.001" transform="translate(14.921 119.923)" fill="none" stroke="#00aeef" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="m0 0 46.078 46.078h204.594l141.405 135.353c-23.429 23.429-61.415 23.429-84.844 0l-71.198-66.288" transform="translate(104.923 29.922)" fill="none" stroke="#00aeef" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0 0c-62.15 17.757-105 74.564-105 139.202V211L0 241l105-30v-71.798C105 74.564 62.15 17.757 0 0Z" transform="translate(346 256)" fill="none" stroke="#00aeef" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="m0 0 30-30 60 60" transform="translate(301 376)" fill="none" stroke="#00aeef" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="m0 0 105.812 100.624a75.005 75.005 0 0 0 111.477-9.546h72.258c16.569 0 30-13.432 30-30 0-16.568-13.431-30-30-30h-123.47" transform="translate(29.923 104.922)" fill="none" stroke="#00aeef" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</svg>

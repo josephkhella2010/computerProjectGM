@@ -3,9 +3,11 @@ import RouterPage from "./pages/routes/RouterPage";
 
 function App() {
   return (
-    <>
-      <RouterPage />
-    </>
+    <div className="appMainWrapper">
+      <div className="appWrapper">
+        <RouterPage />
+      </div>
+    </div>
   );
 }
 

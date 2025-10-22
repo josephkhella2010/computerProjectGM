@@ -14,12 +14,15 @@ export default function DesktopNavigation({ isScroll }: Props) {
           <li>
             <Link to="/aboutUs">About us</Link>
           </li>
-          <li>
-            <Link to="/product">Our Products</Link>
-          </li>
+
           <li>
             <Link to="/contactUs">Contact Us</Link>
           </li>
+          <button className={styles.recycleBtnMobile}>
+            <Link to="/recycle" className={styles.recycleBtnMobileLink}>
+              Recycle Now
+            </Link>
+          </button>
         </ul>
       </div>
     </div>

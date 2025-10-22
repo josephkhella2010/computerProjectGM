@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import DesktopNavigation from "./childComponent/DesktopNavigation";
 import MobileNavBar from "./childComponent/MobileNavBar";
-
+import styles from "./Navigation.module.css";
 export default function NavigationSection() {
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [isScroll, setIsScroll] = useState<boolean>(false);
@@ -35,7 +35,7 @@ export default function NavigationSection() {
   });
 
   return (
-    <div>
+    <div className={styles.navbarMainWrapper}>
       {isMobile ? (
         <MobileNavBar isScroll={isScroll} setIsScroll={setIsScroll} />
       ) : (
