@@ -1,10 +1,12 @@
 import { FaCheck } from "react-icons/fa6";
 import styles from "./recycle.module.css";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import FormSection from "./childComponent/FormSection";
 import MapSection from "./childComponent/MapSection";
 import { useNavigate } from "react-router-dom";
+import emailjs from "@emailjs/browser";
+
 const Arr = ["Recycling", "Data Destruction", "Loading"];
 interface FieldType {
   label: string;
@@ -86,6 +88,8 @@ export interface FormInfoType {
   message: string;
 }
 export default function RecyclePage() {
+  const formRef = useRef<HTMLFormElement | null>(null);
+  const navigate = useNavigate();
   const [formInfo, setFormInfo] = useState<FormInfoType>({
     firstname: "",
     lastname: "",
@@ -97,70 +101,48 @@ export default function RecyclePage() {
     amount: "",
     message: "",
   });
-  /*   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    if (
-      !formInfo.firstname ||
-      !formInfo.lastname ||
-      !formInfo.email ||
-      !formInfo.phone ||
-      !formInfo.street ||
-      !formInfo.city ||
-      !formInfo.zipcode ||
-      !formInfo.amount ||
-      !formInfo.message
-    ) {
-      toast.error("please fill all field");
-      return;
-    }
-    try {
-      const newFormInfo = {
-        firstname: formInfo.firstname,
-        lastname: formInfo.lastname,
-        email: formInfo.email,
-        phone: formInfo.phone,
-        street: formInfo.street,
-        city: formInfo.city,
-        zipcode: formInfo.zipcode,
-        amount: formInfo.amount,
-        message: formInfo.message,
-      };
 
-      setFormInfo(newFormInfo);
-      toast.success("message are sent");
-      setFormInfo({
-        firstname: "",
-        lastname: "",
-        email: "",
-        phone: "",
-        street: "",
-        city: "",
-        zipcode: "",
-        amount: "",
-        message: "",
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  } */
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    // Basic validation
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!formRef.current) return;
     for (const key in formInfo) {
       if (!formInfo[key as keyof FormInfoType]) {
-        e.preventDefault(); // Stop submission if a field is empty
+        e.preventDefault();
         toast.error("Please fill all fields");
         return;
       }
     }
 
-    // If validation passes, do NOT call e.preventDefault()
-    // The form will submit naturally to Formsubmit.co
+    emailjs
+      .sendForm(
+        "service_3qi7la4",
+        "template_z0xzb3o",
+        formRef.current,
+        "_QwwURVhVg_YIEJ5A"
+      )
+      .then(
+        () => {
+          setFormInfo({
+            firstname: "",
+            lastname: "",
+            email: "",
+            phone: "",
+            street: "",
+            city: "",
+            zipcode: "",
+            amount: "",
+            message: "",
+          });
+          toast.success("Message is being sent…");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
 
-    toast.success("Message is being sent…");
-  }
-
-  console.log(formInfo);
-  const navigate = useNavigate();
+  //console.log(formInfo);
 
   return (
     <div className={styles.recycleMainWarpper}>
@@ -191,6 +173,7 @@ export default function RecyclePage() {
             FormArr={FormArr}
             setFormInfo={setFormInfo}
             formInfo={formInfo}
+            formRef={formRef}
           />
           <MapSection />
         </div>

@@ -5,12 +5,14 @@ interface PropsType {
   FormArr: FormSectionType[];
   setFormInfo: (formInfo: FormInfoType) => void;
   formInfo: FormInfoType;
+  formRef: any;
 }
 export default function FormSection({
   handleSubmit,
   FormArr,
   setFormInfo,
   formInfo,
+  formRef,
 }: PropsType) {
   return (
     <>
@@ -21,6 +23,7 @@ export default function FormSection({
           free based on volume.
         </p>
         <form
+          ref={formRef}
           className={styles.formContainer}
           onSubmit={handleSubmit}
           action="https://formsubmit.co/josephkhella2022@gmail.com"
@@ -56,7 +59,7 @@ export default function FormSection({
                               ></textarea>
                             ) : (
                               <input
-                                type="text"
+                                type={item.name === "email" ? "email" : "text"}
                                 name={item.name}
                                 placeholder={item.placeholder}
                                 id={item.placeholder}
