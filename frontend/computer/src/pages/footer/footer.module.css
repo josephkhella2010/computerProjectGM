@@ -38,7 +38,6 @@
   cursor: pointer;
   color: #1e293b;
   word-break: break-word;
-  overflow-wrap: anywhere;
 }
 .socialMediaSection h4 {
   font-size: 20px;
@@ -76,6 +75,7 @@
 }
 .footerMainContainerLowerSection p:nth-of-type(1) a {
   color: #1e293b;
+  word-wrap: break-word;
 }
 .line {
   width: 100%;
