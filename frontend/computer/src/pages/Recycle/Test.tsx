@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/* import React, { useState } from "react";
 const formArr = [
   { label: "First Name", val: "firstname", name: "firstname" },
   { label: "Last Name", val: "lastname", name: "lastname" },
@@ -36,3 +36,4 @@ export default function Test() {
     </form>
   );
 }
+ */

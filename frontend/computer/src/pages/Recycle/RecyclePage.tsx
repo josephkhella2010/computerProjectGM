@@ -144,8 +144,6 @@ export default function RecyclePage() {
     }
   } */
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    const form = e.currentTarget;
-
     // Basic validation
     for (const key in formInfo) {
       if (!formInfo[key as keyof FormInfoType]) {
