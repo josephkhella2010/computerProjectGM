@@ -275,10 +275,12 @@
     -webkit-text-stroke-color: #ffffff;
     stroke: #ffffff;
     letter-spacing: 1px;
+    width: 100%;
   }
   .recycleUpperContainer h3 {
     -webkit-text-stroke-width: 1px;
     stroke-width: 1px;
     letter-spacing: 1px;
+    width: 100%;
   }
 }

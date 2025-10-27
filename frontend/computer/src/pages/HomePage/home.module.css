@@ -734,5 +734,6 @@
     -webkit-text-stroke-color: #ffffff;
     stroke: #ffffff;
     letter-spacing: 1px;
+    width: 100%;
   }
 }
