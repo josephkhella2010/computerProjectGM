@@ -212,6 +212,8 @@
   border: 1px solid transparent;
   width: 150px;
   font-weight: 700;
+  background: #770909a4;
+  border: 1px solid #d9b9b9;
 }
 .recycleLowerContainer button:hover {
   border: 1px solid white;

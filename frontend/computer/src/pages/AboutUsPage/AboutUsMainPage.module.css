@@ -221,13 +221,13 @@
   justify-content: center;
   color: white;
   cursor: pointer;
-  background-color: rgb(152, 48, 48);
   border: 1px solid transparent;
   width: 150px;
   font-weight: 700;
+  background: #770909a4;
+  border: 1px solid #d9b9b9;
 }
 .recycleLowerContainer button:hover {
-  border: 1px solid white;
   background: rgba(175, 175, 175, 0.25);
   padding: 15px 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
