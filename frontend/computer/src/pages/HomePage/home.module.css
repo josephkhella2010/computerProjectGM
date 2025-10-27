@@ -729,10 +729,11 @@
     grid-template-columns: repeat(1, 1fr);
   }
   .HomePageFirstContainerContent h1 {
-    -webkit-text-stroke-width: 0.4px;
-    stroke-width: 0.4px;
+    -webkit-text-stroke-width: 1px;
+    stroke-width: 1px;
     -webkit-text-stroke-color: #ffffff;
     stroke: #ffffff;
-    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 40px;
   }
 }
