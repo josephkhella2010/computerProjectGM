@@ -274,15 +274,11 @@
     stroke-width: 1px;
     -webkit-text-stroke-color: #ffffff;
     stroke: #ffffff;
-    font-size: 1.8rem;
-    line-height: 40px;
+    letter-spacing: 1px;
   }
   .recycleUpperContainer h3 {
     -webkit-text-stroke-width: 1px;
     stroke-width: 1px;
-    -webkit-text-stroke-color: #ffffff;
-    stroke: #ffffff;
-    font-size: 1.8rem;
-    line-height: 40px;
+    letter-spacing: 1px;
   }
 }
