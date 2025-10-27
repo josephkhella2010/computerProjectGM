@@ -1,0 +1,324 @@
+.aboutUsMainWarpper {
+  width: 100%;
+  min-height: 100dvh;
+}
+.aboutUsWarpper {
+  width: 100%;
+  min-height: 100dvh;
+  background-color: yellow;
+  background-image: url("/Foto/LaptopRecyclingAboutUs.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Exo 2", sans-serif;
+}
+.aboutUsMainContainer {
+  background-color: #b13636d6;
+  padding: 180px 0px 180px 0px;
+  min-height: 100dvh;
+}
+.aboutUsMainPageUpperContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 0px 30px 50px 30px;
+}
+.aboutUsMainPageUpperContainer h1 {
+  font-size: 36px;
+  color: white;
+  border-bottom: 2px solid#d9b9b9;
+  padding-bottom: 30px;
+}
+.aboutUsMainPageUpperContainerMainSection {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.aboutUsMainPageUpperContainerMainSection h2 {
+  color: #ffffff;
+  padding-bottom: 20px;
+  position: relative;
+}
+.aboutUsMainPageUpperContainerMainSection h2::after {
+  color: #ffffff;
+  position: absolute;
+  content: "";
+  top: 105%;
+  left: 0px;
+  background-color: #d9b9b9;
+  width: 70px;
+  height: 2px;
+}
+.aboutUsMainPageUpperContainerSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.aboutUsMainPageUpperContainerSectionText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  color: #ffffff;
+}
+.aboutUsMainPageUpperContainerSection img {
+  width: 100%;
+  border-radius: 12px;
+}
+/* Second Container */
+.aboutUsMainPageSecondContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: #f7f7f7;
+  padding: 100px 30px 100px 30px;
+}
+.aboutUsMainPageSecondContainer h1 {
+  text-align: center;
+  color: #1d4394;
+}
+.aboutUsMainPageSecondContainerLowerContent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 0px 50px;
+}
+.aboutUsMainPageSecondContainerLowerContentText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.aboutUsMainPageSecondContainerLowerContentText h3 {
+  color: #1d4394;
+}
+.aboutUsMainPageSecondContainerLowerContentText p {
+  color: #222222;
+  gap: 10px;
+  text-transform: capitalize;
+}
+/* third Container */
+.aboutUsMainPageThirdContainer {
+  background-color: #f7f7f7;
+  padding: 0px 30px 100px 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.aboutUsMainPageThirdContainerText {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+  width: 100%;
+}
+.aboutUsMainPageThirdContainer img {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+}
+.recycleBtn button {
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  background-color: rgb(152, 48, 48);
+  border: 1px solid transparent;
+}
+
+.recycleBtn button:focus {
+  outline: none;
+  box-shadow: none;
+}
+.recycleBtn button:hover {
+  background-color: #d9b9b9;
+  border: 1px solid #d9b9b9;
+  color: #222222;
+}
+/* fourth container */
+.aboutUsMainPageFourthContainer {
+  background-color: #f7f7f7;
+  padding: 0px 30px 100px 30px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px;
+}
+.aboutUsMainPageFourthContainer h1 {
+  text-align: center;
+  color: #1d4394;
+}
+.aboutUsMainPageFourthContainerLowerSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.aboutUsMainPageFourthContainerLowerSection img {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+.aboutUsMainPageFourthContainerLowerSectionText {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+/* fifth container */
+.aboutUsMainPageFifthContainer {
+  padding: 100px 30px 100px 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+.aboutUsMainPageFifthContainerImgSection {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+}
+.aboutUsMainPageFifthContainerImgSection img {
+  width: 100%;
+  border-radius: 10px;
+}
+.aboutUsMainPageFifthContainerTextSection {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  color: #ffffff;
+}
+/* sixth container */
+.recycleLowerContainer {
+  padding: 0px 30px 0px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recycleLowerContainer p {
+  font-size: 2rem;
+  font-family: "Poppins", Sans-serif;
+  font-weight: 900;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  -webkit-text-stroke-width: 1.5px;
+  stroke-width: 1.5px;
+  -webkit-text-stroke-color: #ffffff;
+  stroke: #ffffff;
+  color: #00aeef00;
+  width: 70%;
+}
+.recycleLowerContainer button {
+  padding: 15px 12px;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  background-color: rgb(152, 48, 48);
+  border: 1px solid transparent;
+  width: 150px;
+  font-weight: 700;
+}
+.recycleLowerContainer button:hover {
+  border: 1px solid white;
+  background: rgba(175, 175, 175, 0.25);
+  padding: 15px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/*  */
+
+@media screen and (max-width: 850px) {
+  .aboutUsMainPageUpperContainerSection {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .aboutUsMainPageUpperContainer h1 {
+    font-size: 20px;
+  }
+  .aboutUsMainPageUpperContainerMainSection h2 {
+    font-size: 18px;
+  }
+  .aboutUsMainPageUpperContainerSectionText p {
+    font-size: 15px;
+  }
+  .aboutUsMainPageFifthContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 750px) {
+  .aboutUsMainPageThirdContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .aboutUsMainPageFourthContainerLowerSection {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .aboutUsMainContainer {
+    padding: 120px 0px 180px 0px;
+  }
+  .aboutUsMainPageUpperContainer {
+    padding: 50px 20px;
+  }
+  .aboutUsMainPageUpperContainer h1 {
+    font-size: 16px;
+  }
+  .aboutUsMainPageUpperContainerMainSection h2 {
+    font-size: 14px;
+  }
+  .aboutUsMainPageUpperContainerSectionText p {
+    font-size: 13px;
+  }
+  .aboutUsMainPageSecondContainerLowerContent {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0px 20px;
+  }
+  .aboutUsMainPageSecondContainerLowerContent {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .aboutUsMainPageThirdContainer {
+    gap: 80px;
+  }
+  .aboutUsMainPageSecondContainer h1 {
+    font-size: 20px;
+  }
+  .aboutUsMainPageSecondContainerLowerContentText h3 {
+    font-size: 17px;
+  }
+  .aboutUsMainPageSecondContainer p {
+    font-size: 14px;
+  }
+  .aboutUsMainPageSecondContainerLowerContentText p {
+    font-size: 14px;
+  }
+  .aboutUsMainPageFourthContainer h1 {
+    font-size: 17px;
+  }
+  .aboutUsMainPageFourthContainerLowerSectionText {
+    font-size: 14px;
+  }
+  .recycleLowerContainer {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .recycleLowerContainer p {
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    -webkit-text-stroke-width: 0.7px;
+    stroke-width: 0.7px;
+  }
+}

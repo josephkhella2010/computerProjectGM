@@ -27,9 +27,9 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import HomeSection from "../HomePage/HomeSection";
 import NavigationSection from "../Navigation/NavigationSection";
 import ContactUsPage from "../ContactUs/ContactUsPage";
-import AboutUsPage from "../aboutUs/AboutUsPage";
 import Footer from "../footer/Footer";
 import RecyclePage from "../Recycle/RecyclePage";
+import AboutUsMainPage from "../AboutUsPage/AboutUsMainPage";
 
 function AppRoutes() {
   return (
@@ -38,7 +38,9 @@ function AppRoutes() {
       <Routes>
         <Route path="/" element={<HomeSection />} />
         <Route path="/contactUs" element={<ContactUsPage />} />
-        <Route path="/aboutUs" element={<AboutUsPage />} />
+        {/*         <Route path="/aboutUs" element={<AboutUsPage />} />
+         */}{" "}
+        <Route path="/aboutUs" element={<AboutUsMainPage />} />
         <Route path="/recycle" element={<RecyclePage />} />
       </Routes>
       <Footer />
