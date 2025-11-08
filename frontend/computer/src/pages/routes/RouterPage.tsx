@@ -30,6 +30,7 @@ import ContactUsPage from "../ContactUs/ContactUsPage";
 import Footer from "../footer/Footer";
 import RecyclePage from "../Recycle/RecyclePage";
 import AboutUsMainPage from "../AboutUsPage/AboutUsMainPage";
+import WhatAcceptPage from "../aboutUs/What Accept/WhatAcceptPage";
 
 function AppRoutes() {
   return (
@@ -41,6 +42,7 @@ function AppRoutes() {
         {/*         <Route path="/aboutUs" element={<AboutUsPage />} />
          */}{" "}
         <Route path="/aboutUs" element={<AboutUsMainPage />} />
+        <Route path="/what-we-accept" element={<WhatAcceptPage />} />
         <Route path="/recycle" element={<RecyclePage />} />
       </Routes>
       <Footer />

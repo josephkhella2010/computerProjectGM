@@ -34,18 +34,20 @@
   opacity: 0.85;
 }
 .navBar.scrolled {
-  opacity: 0.85;
+  background: #d52626c7;
 }
 .navBar img {
   height: 50px;
 }
 .navBar ul {
-  width: 60%;
+  width: 100%;
+  /*   background-color: blueviolet;
+ */
   height: 100%;
   display: flex;
   align-items: center;
   gap: 50px;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .navBar ul li {
   list-style: none;
@@ -63,7 +65,7 @@
 .navBar ul li a:after {
   content: " ";
   position: absolute;
-  top: 110%;
+  top: 27px;
   left: 0px;
   width: 0%;
   height: 3px;
@@ -209,17 +211,154 @@
   font-weight: bold;
   font-size: 18px;
 }
+/* menus and submenus */
+.menuContainerDesktop {
+  /*   background-color: aqua;
+ */
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0px;
+  width: 150px;
+}
+.subMenuDesktop {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  /*   display: none;
+ */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 200px;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.179);
+}
+.navBar.subMenuDesktop {
+  opacity: 1 !important;
+}
+.menuContainerDesktopLinkContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  word-break: break-all;
+}
+.subMenuDesktopLink {
+  display: block;
+  padding: 8px 16px;
+  width: 200px;
+  text-decoration: none;
+  color: black;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: normal;
+  line-height: 1.4;
+}
+/* .menuContainerDesktop:hover > .subMenuDesktop {
+  display: flex;
+} */
+.menuContainerDesktop li {
+  width: fit-content;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.menuContainerDesktop li:after {
+  content: " ";
+  position: absolute;
+  top: 50px;
+  left: 0%;
+  width: 0%;
+  height: 3px;
+  background-color: rgb(245, 170, 170);
+  transition: width 0.3s linear;
+  -webkit-transition: width 0.3s linear;
+  -moz-transition: width 0.3s linear;
+  -ms-transition: width 0.3s linear;
+  -o-transition: width 0.3s linear;
+  border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -ms-border-radius: 3px 3px 3px 3px;
+  -o-border-radius: 3px 3px 3px 3px;
+  z-index: 100;
+}
+.menuContainerDesktop > div > li:hover::after {
+  width: 100%;
+}
+.subMenuDesktopLink {
+  display: block;
+  width: 200px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-decoration: none;
+  color: black;
+}
 /*  */
+
+/*  */
+
+@media screen and (max-width: 1150px) {
+  .navBar ul {
+    gap: 15px;
+  }
+  .navBar ul li a {
+    font-size: 14px;
+  }
+  .recycleBtnMobile {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+  .menuContainerDesktop {
+    width: 160px;
+  }
+  .menuContainerDesktop li {
+    font-size: 14px;
+  }
+  .subMenuDesktop {
+    font-size: 0.7rem;
+    width: 200px;
+  }
+}
 
 @media screen and (max-width: 850px) {
   .navBar ul {
-    width: 70%;
+    width: 100%;
   }
   .navBar ul li a {
     font-size: 13px;
   }
   .navbarMainWrapper {
     left: 0px;
+  }
+  .subMenuDesktopLink {
+    display: block;
+    width: 200px;
+    text-decoration: none;
+    color: black;
+  }
+  .menuContainerDesktop {
+    width: 130px;
   }
 }
 @media screen and (max-width: 400px) {
