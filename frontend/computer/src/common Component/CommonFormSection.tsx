@@ -459,7 +459,9 @@ export default function CommonFormSection() {
                           })
                         }
                       >
-                        <option value="">Select type of the request</option>
+                        <option value="" disabled>
+                          Select type of the request
+                        </option>
                         <option value="pick-up">PickUp</option>
                         <option value="data-destruction">
                           Data Destruction
