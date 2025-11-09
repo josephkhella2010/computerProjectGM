@@ -152,14 +152,14 @@ export default function DesktopNavigation({ isScroll }: Props) {
                   What We Accept
                 </Link>
                 <Link
-                  to="/aboutUs"
+                  to="/drop-off"
                   className={styles.subMenuDesktopLink}
                   onClick={() => setActiveMenu(null)}
                 >
                   Drop-Off
                 </Link>
                 <Link
-                  to="/aboutUs"
+                  to="/data-destruction"
                   className={styles.subMenuDesktopLink}
                   onClick={() => setActiveMenu(null)}
                 >

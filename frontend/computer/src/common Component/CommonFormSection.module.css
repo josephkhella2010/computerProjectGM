@@ -1,0 +1,79 @@
+.recycleMiddleContainerLeftSection {
+  padding: 30px 20px 30px 20px;
+  border-radius: 10px;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.17);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  font-family: "Exo 2", sans-serif;
+}
+.recycleMiddleContainerLeftSection h5:nth-of-type(1) {
+  color: #1d4394;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.recycleMiddleContainerLeftSectionFirstPara {
+  color: #222222;
+  text-align: center;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.formSection h6 {
+  font-weight: 800;
+  color: #222222;
+  font-size: 1.1rem;
+}
+.inputLabelMainContainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+.inputLabelContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.inputLabelContainer label {
+  font-weight: 800;
+  color: #222222;
+  font-size: 14px;
+}
+.inputLabelContainer span {
+  color: #c75353;
+}
+.textInput {
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  border: 0.5px solid black;
+  padding: 10px;
+}
+.textInput::placeholder,
+.textAreaInput::placeholder {
+  font-size: 1.1rem;
+  color: #696969;
+  font-family: "Exo 2", sans-serif;
+}
+.textAreaInput {
+  min-height: 100px;
+  padding: 10px;
+}
+.formContainer button {
+  padding: 15px 12px;
+  background-color: #c75353;
+  color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}

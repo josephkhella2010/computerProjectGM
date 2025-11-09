@@ -1,3 +1,4 @@
+/* import { useLocation } from "react-router-dom";
 import styles from "../recycle.module.css";
 import type { FormInfoType, FormSectionType } from "../RecyclePage";
 interface PropsType {
@@ -14,6 +15,9 @@ export default function FormSection({
   formInfo,
   formRef,
 }: PropsType) {
+  const location = useLocation();
+
+  console.log(location.pathname);
   return (
     <>
       <div className={styles.recycleMiddleContainerLeftSection}>
@@ -86,3 +90,113 @@ export default function FormSection({
     </>
   );
 }
+ */
+
+/* import { useLocation } from "react-router-dom";
+import styles from "../recycle.module.css";
+import type { FormInfoType, FormSectionType } from "../RecyclePage";
+interface PropsType {
+  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+  FormArr: FormSectionType[];
+  setFormInfo: (formInfo: FormInfoType) => void;
+  formInfo: FormInfoType;
+  formRef: any;
+}
+export default function FormSection({
+  handleSubmit,
+  FormArr,
+  setFormInfo,
+  formInfo,
+  formRef,
+}: PropsType) {
+  const location = useLocation();
+
+  console.log(location.pathname);
+  function getHeader() {
+    let name = "";
+    switch (location.pathname) {
+      case "/recycle":
+        name = "See If You Qualify For Free Pickup";
+        break;
+      case "/data-destruction":
+        name = "See If You Qualify For Free Data Destruction";
+        break;
+      default:
+        name = ""; // 👈 nothing in default
+        break;
+    }
+    return name;
+  }
+  return (
+    <>
+      <div className={styles.recycleMiddleContainerLeftSection}>
+        {getHeader() && <h5>{getHeader()}</h5>}
+        <p className={styles.recycleMiddleContainerLeftSectionFirstPara}>
+          Basic recycling is FREE for residents of Lincoln. Not all pickups are
+          free based on volume.
+        </p>
+        <form
+          ref={formRef}
+          className={styles.formContainer}
+          onSubmit={handleSubmit}
+          action="https://formsubmit.co/josephkhella2022@gmail.com"
+          method="POST"
+        >
+          {FormArr &&
+            FormArr.map((item, index) => {
+              return (
+                <div key={index} className={styles.formSection}>
+                  <h6>{item.title}</h6>
+                  <div className={styles.inputLabelMainContainer}>
+                    {item.fields &&
+                      item.fields.map((item, ind) => {
+                        return (
+                          <div key={ind} className={styles.inputLabelContainer}>
+                            <label htmlFor={item.placeholder}>
+                              {item.label} <span>*</span>
+                            </label>
+
+                            {item.label === "Message" ? (
+                              <textarea
+                                name={item.name}
+                                id={item.placeholder}
+                                placeholder={item.placeholder}
+                                className={styles.textAreaInput}
+                                value={formInfo[item.val as keyof FormInfoType]}
+                                onChange={(e) =>
+                                  setFormInfo({
+                                    ...formInfo,
+                                    [item.name]: e.target.value,
+                                  })
+                                }
+                              ></textarea>
+                            ) : (
+                              <input
+                                type={item.name === "email" ? "email" : "text"}
+                                name={item.name}
+                                placeholder={item.placeholder}
+                                id={item.placeholder}
+                                className={styles.textInput}
+                                value={formInfo[item.val as keyof FormInfoType]}
+                                onChange={(e) =>
+                                  setFormInfo({
+                                    ...formInfo,
+                                    [item.name]: e.target.value,
+                                  })
+                                }
+                              />
+                            )}
+                          </div>
+                        );
+                      })}
+                  </div>
+                </div>
+              );
+            })}
+          <button type="submit">Submit Now</button>
+        </form>
+      </div>
+    </>
+  );
+}
+ */

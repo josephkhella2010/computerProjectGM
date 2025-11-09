@@ -31,10 +31,16 @@
  */
 }
 .mobileNavBar.scrolled {
-  opacity: 0.85;
+  background: #d52626b9;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.381);
 }
 .navBar.scrolled {
-  background: #d52626c7;
+  background: #d52626b9;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.381);
 }
 .navBar img {
   height: 50px;
@@ -226,12 +232,9 @@
 }
 .subMenuDesktop {
   background-color: rgb(255, 255, 255);
-  padding: 10px;
   position: absolute;
   top: 100%;
   left: 0px;
-  /*   display: none;
- */
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -239,6 +242,7 @@
   flex-wrap: wrap;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.179);
+  overflow: hidden;
 }
 .navBar.subMenuDesktop {
   opacity: 1 !important;
@@ -253,14 +257,18 @@
 }
 .subMenuDesktopLink {
   display: block;
-  padding: 8px 16px;
-  width: 200px;
+  padding: 15px;
+  width: 100%;
   text-decoration: none;
   color: black;
   white-space: normal;
   overflow-wrap: break-word;
   word-break: normal;
   line-height: 1.4;
+}
+.subMenuDesktopLink:hover {
+  background-color: #d9b9b9;
+  color: #ffffff;
 }
 /* .menuContainerDesktop:hover > .subMenuDesktop {
   display: flex;

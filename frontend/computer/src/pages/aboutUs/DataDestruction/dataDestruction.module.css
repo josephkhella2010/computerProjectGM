@@ -1,0 +1,94 @@
+.DataDestructionPageMainContainer {
+  background-color: orangered;
+  min-height: 100dvh;
+  padding-top: 60px;
+  font-family: "Exo 2", sans-serif;
+}
+.DataDestructionPageContainer {
+  background-image: url("/Foto/dataDesOne.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  min-height: 100dvh;
+}
+.DataDestructionPageFirstSection {
+  background-color: #c75353af;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.DataDestructionPageFirstSection h1 {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 600;
+  font-family: "Exo 2", sans-serif;
+  text-align: center;
+}
+/* .DataDestructionPageSecondSection */
+.DataDestructionPageSecondSection {
+  background-color: #ffffff;
+  padding: 100px 30px;
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: 40px;
+}
+.DataDestructionPageSecondSectionLeftContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.DataDestructionPageSecondSectionLeftContent h1 {
+  font-size: 30px;
+}
+.DataDestructionPageSecondSectionLeftContent p {
+}
+.DataDestructionPageSecondSectionRightContent {
+  width: 100%;
+}
+.DataDestructionPageSecondSectionRightContent img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center center;
+  height: 400px;
+}
+/* .DataDestructionPageThirdSection */
+.DataDestructionPageThirdSection {
+  background-color: #f7f7f7;
+  padding: 100px 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.DataDestructionPageThirdSectionRightContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/*  */
+
+@media screen and (max-width: 985px) {
+  .DataDestructionPageSecondSectionLeftContent h1 {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 810px) {
+  .DataDestructionPageSecondSection {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .DataDestructionPageSecondSectionLeftContent {
+    order: 2;
+  }
+
+  .DataDestructionPageSecondSectionRightContent {
+    order: 1;
+  }
+  .DataDestructionPageThirdSection {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

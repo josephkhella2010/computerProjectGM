@@ -31,6 +31,8 @@ import Footer from "../footer/Footer";
 import RecyclePage from "../Recycle/RecyclePage";
 import AboutUsMainPage from "../AboutUsPage/AboutUsMainPage";
 import WhatAcceptPage from "../aboutUs/What Accept/WhatAcceptPage";
+import DropOffPage from "../aboutUs/DropOff/DropOffPage";
+import DataDestructionPage from "../aboutUs/DataDestruction/DataDestructionPage";
 
 function AppRoutes() {
   return (
@@ -44,6 +46,8 @@ function AppRoutes() {
         <Route path="/aboutUs" element={<AboutUsMainPage />} />
         <Route path="/what-we-accept" element={<WhatAcceptPage />} />
         <Route path="/recycle" element={<RecyclePage />} />
+        <Route path="/drop-off" element={<DropOffPage />} />
+        <Route path="/data-destruction" element={<DataDestructionPage />} />
       </Routes>
       <Footer />
     </>
