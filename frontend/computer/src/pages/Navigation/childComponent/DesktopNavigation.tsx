@@ -139,11 +139,18 @@ export default function DesktopNavigation({ isScroll }: Props) {
             onMouseLeave={() => setActiveMenu(null)}
           >
             <div className={styles.menuContainerDesktopLinkContainer}>
-              <li>About us</li>
+              <li>About</li>
               <IoMdArrowDropdown style={{ color: "#ffffff" }} />
             </div>
             {activeMenu === "about" && (
               <div className={styles.subMenuDesktop}>
+                <Link
+                  to="/aboutUs"
+                  className={styles.subMenuDesktopLink}
+                  onClick={() => setActiveMenu(null)}
+                >
+                  About us
+                </Link>
                 <Link
                   to="/what-we-accept"
                   className={styles.subMenuDesktopLink}

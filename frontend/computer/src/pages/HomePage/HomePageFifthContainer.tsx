@@ -20,9 +20,9 @@ export default function HomePageFifthContainer() {
       </div>
       <div className={styles.homePageFifthContainerTextSection}>
         <h3>Why Choose Us</h3>
-        <h3>Why Choose GMcomputerrecycle</h3>
+        <h3>Why Choose GM Computer Recycle</h3>
         <p>
-          When considering electronic recycling partners, GMcomputerrecycle
+          When considering electronic recycling partners, GM Computer Recycle
           stands out for our unwavering dedication to environmental
           sustainability and data security. With years of experience in the
           industry, we have honed our processes to ensure the highest standards

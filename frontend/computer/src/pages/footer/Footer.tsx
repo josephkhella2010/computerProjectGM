@@ -41,9 +41,9 @@ export default function AboutUsPage() {
         <div className={styles.footerMainContainerLowerSection}>
           <p>
             {" "}
-            Now contact us on{" "}
-            <a href="mailto:GMcomputerllc@yahoo.com">
-              GMcomputerllc@yahoo.com
+            Now Contact Us on{" "}
+            <a href="mailto:info@gmcomputerrecycle.com">
+              info@gmcomputerrecycle.com
             </a>{" "}
             call us on <a href="tel:+15156812487">+15156812487</a> .
           </p>

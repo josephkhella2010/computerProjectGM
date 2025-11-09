@@ -25,7 +25,9 @@ export default function ContactUsMiddleSection() {
             support rep. Don’t worry… we’re here for you.
           </p>
           <p>
-            <a href="mailto:GMcomputerllc@yahoo.com">GMcomputerllc@yahoo.com</a>{" "}
+            <a href="mailto:info@gmcomputerrecycle.com">
+              info@gmcomputerrecycle.com
+            </a>{" "}
           </p>
         </div>
       </div>

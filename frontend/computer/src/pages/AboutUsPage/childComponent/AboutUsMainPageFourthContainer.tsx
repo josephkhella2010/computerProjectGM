@@ -4,7 +4,7 @@ export default function AboutUsMainPageFourthContainer() {
     <div className={styles.aboutUsMainPageFourthContainer}>
       <h1>Innovation and Improvement</h1>
       <p>
-        One area that separates Technology Recyclers from the pack is our
+        One area that separates GM Computer Recycle from the pack is our
         commitment to constant innovation and workplace improvement. First of
         all, due to the basic health concerns that arise in our business, it is
         very important for us to ensure our workers’ safety and health. Because

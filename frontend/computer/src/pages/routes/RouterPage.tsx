@@ -41,8 +41,7 @@ function AppRoutes() {
       <Routes>
         <Route path="/" element={<HomeSection />} />
         <Route path="/contactUs" element={<ContactUsPage />} />
-        {/*         <Route path="/aboutUs" element={<AboutUsPage />} />
-         */}{" "}
+        <Route path="/aboutUs" element={<AboutUsMainPage />} />
         <Route path="/aboutUs" element={<AboutUsMainPage />} />
         <Route path="/what-we-accept" element={<WhatAcceptPage />} />
         <Route path="/recycle" element={<RecyclePage />} />

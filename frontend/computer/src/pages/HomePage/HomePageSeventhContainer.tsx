@@ -3,20 +3,6 @@ export default function HomePageSeventhContainer() {
   return (
     <div className={styles.HomePageSecondSectionInnerContent}>
       <div className={styles.homePageInnerSection}>
-        <h4>GREAT VALUE</h4>
-        <p>
-          We offer you quality and clean UK used laptop computers at affordable
-          prices.
-        </p>
-      </div>
-      <div className={styles.homePageInnerSection}>
-        <h4>CONFIDENCE</h4>
-        <p>
-          All our products are tested and confirmed ok, with 30 days limited
-          warranty.
-        </p>
-      </div>
-      <div className={styles.homePageInnerSection}>
         <h4>SHOPINVERSE Iwoa</h4>
 
         <p>

@@ -14,9 +14,9 @@ export default function HomePageThirdContainer() {
       </div>
       <div className={styles.homePageThirdContainerRightSection}>
         <h3> ABOUT US</h3>
-        <h2> ABOUT gmcomputerrecycle</h2>
+        <h2> ABOUT gm computer recycle</h2>
         <p>
-          In the heart of our mission at GMcomputerrecycle lies a fervent
+          In the heart of our mission at GM Computer Recycle lies a fervent
           dedication to environmental stewardship and community empowerment.
           With years of expertise in electronic recycling, we stand as a beacon
           of sustainability, providing responsible IT disposal solutions for
@@ -27,7 +27,7 @@ export default function HomePageThirdContainer() {
           of education and engagement.
         </p>
         <p>
-          At GMcomputerrecycle, our commitment goes beyond just recycling; it
+          At GM Computer Recycle, our commitment goes beyond just recycling; it
           extends to building a more sustainable and inclusive world. We
           understand that electronic waste is a global challenge with local
           impacts, which is why we work closely with communities to tailor our

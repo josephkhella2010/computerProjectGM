@@ -18,7 +18,9 @@ export default function ContactUsBottomSection() {
             <a href="tel:+15156812487">+15156812487</a>{" "}
           </p>
           <p>
-            <a href="mailto:GMcomputerllc@yahoo.com">GMcomputerllc@yahoo.com</a>{" "}
+            <a href="mailto:info@gmcomputerrecycle.com">
+              info@gmcomputerrecycle.com
+            </a>{" "}
           </p>
         </div>
       </div>

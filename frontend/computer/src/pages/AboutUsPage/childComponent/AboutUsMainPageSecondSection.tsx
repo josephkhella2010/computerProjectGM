@@ -42,7 +42,7 @@ export default function AboutUsMainPageSecondSection() {
     <div className={styles.aboutUsMainPageSecondContainer}>
       <h1>Industries We Serve</h1>
       <p>
-        Technology Recyclers serves over 4,000 clients in a wide variety of
+        GM Computer Recycle serves over 4,000 clients in a wide variety of
         industries- It doesn’t matter how big or small, we do it all!
       </p>
       <div className={styles.aboutUsMainPageSecondContainerLowerContent}>
