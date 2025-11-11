@@ -1,0 +1,93 @@
+.whatAcceptSecondContainer {
+  width: 100%;
+  padding: 0px 30px 100px 30px;
+  background-color: #d9b9b9;
+}
+.whatAcceptSecondContainerMainSection {
+  background-color: #ffffff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  border-radius: 15px;
+  position: relative;
+  top: -80px;
+}
+.whatAcceptSecondContainerMainSectionTopSection {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.whatAcceptSecondContainerMainSectionleftContent {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.whatAcceptSecondContainerMainSectionleftContent h4 {
+  color: #335283;
+  font-family: "Poppins", Sans-serif;
+  font-size: 26px;
+}
+.whatAcceptSecondContainerMainSectionleftContent h1 {
+  color: #5d5d5d;
+  font-family: "Poppins", Sans-serif;
+  font-size: 30px;
+}
+.whatAcceptSecondContainerMainSectionRightContent {
+  width: 50%;
+  color: #222222;
+  font-family: "Poppins", Sans-serif;
+}
+.itemContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.itemSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.itemContent {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #222222;
+  font-family: "Poppins", Sans-serif;
+}
+.checkedIcon {
+  color: #d9b9b9;
+}
+
+/* a */
+
+@media screen and (max-width: 900px) {
+  .whatAcceptSecondContainerMainSectionTopSection {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .whatAcceptSecondContainerMainSectionleftContent {
+    width: 100%;
+  }
+  .whatAcceptSecondContainerMainSectionRightContent {
+    width: 100%;
+  }
+  .itemContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .itemContainer {
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+  }
+  .itemSection {
+    width: 90%;
+  }
+}

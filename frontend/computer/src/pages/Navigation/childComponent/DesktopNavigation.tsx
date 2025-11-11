@@ -231,28 +231,28 @@ export default function DesktopNavigation({ isScroll }: Props) {
             {activeMenu === "industries" && (
               <div className={styles.subMenuDesktop}>
                 <Link
-                  to="/what-we-accept"
+                  to="/government-page"
                   className={styles.subMenuDesktopLink}
                   onClick={() => setActiveMenu(null)}
                 >
                   Government
                 </Link>
                 <Link
-                  to="/aboutUs"
+                  to="/education-page"
                   className={styles.subMenuDesktopLink}
                   onClick={() => setActiveMenu(null)}
                 >
                   Education
                 </Link>
                 <Link
-                  to="/aboutUs"
+                  to="medical-page"
                   className={styles.subMenuDesktopLink}
                   onClick={() => setActiveMenu(null)}
                 >
                   Medical
                 </Link>
                 <Link
-                  to="/aboutUs"
+                  to="/finance-page"
                   className={styles.subMenuDesktopLink}
                   onClick={() => setActiveMenu(null)}
                 >

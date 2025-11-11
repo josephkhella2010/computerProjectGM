@@ -1,0 +1,70 @@
+.HomePageSecondContainerMainSection {
+  padding: 100px 30px;
+  /*   background-color: chocolate;
+ */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.HomePageSecondContainerMainSectionContent {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.svgIcon {
+  color: #d9b9b9;
+  display: flex;
+  justify-content: flex-end;
+  width: 50px;
+  height: 50px;
+}
+
+.HomePageSecondContainerMainSectionContentsubContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.HomePageSecondContainerMainSectionContentsubContent h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+.HomePageSecondContainerMainSectionContentsubContent p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  max-width: 300px;
+}
+
+@media screen and (max-width: 850px) {
+  .HomePageSecondContainerMainSection {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .HomePageSecondContainerMainSectionContent {
+    flex-direction: column;
+  }
+  .HomePageSecondContainerMainSectionContentsubContent h3 {
+    font-size: 30px;
+  }
+  .HomePageSecondContainerMainSectionContentsubContent p {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    max-width: 90%;
+    font-size: 24px;
+  }
+
+  .HomePageSecondSection h1 {
+    height: auto;
+    font-size: 18px;
+    text-align: center;
+  }
+  .HomePageSecondSection p {
+    width: 85%;
+    text-align: left;
+  }
+  .HomePageSecondSectionInnerContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 450px) {
+  .HomePageSecondSectionInnerContent {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,0 +1,26 @@
+.CommonIndustryLowerSectionContainer {
+  padding: 100px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-family: "Exo 2", sans-serif;
+  background-color: #f7f7f7;
+  color: #1c244b;
+}
+
+.CommonIndustryLowerSectionContainer h1 {
+  font-size: 33px;
+  font-weight: 600;
+}
+.CommonIndustryLowerSectionContainer p {
+  width: 85%;
+}
+@media screen and (max-width: 450px) {
+  .CommonIndustryLowerSectionContainer h1 {
+    font-size: 18px;
+  }
+  .CommonIndustryLowerSectionContainer p {
+    font-size: 13px;
+    width: 100%;
+  }
+}

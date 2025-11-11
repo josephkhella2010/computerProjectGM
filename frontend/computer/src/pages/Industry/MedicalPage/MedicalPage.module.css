@@ -1,0 +1,50 @@
+.governmentPageFirstSectionWrapper {
+  background-image: url("/Foto/governmentImgOne.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 600px;
+}
+
+.governmentPageFirstSectionMainContainer {
+  padding: 200px 30px 100px 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.governmentPageFirstSectionLeftContent {
+  width: 100%;
+  padding: 100px 30px;
+  background-image: linear-gradient(
+    to right,
+    #ffffffbe 80%,
+    rgba(255, 255, 255, 0.46) 90%,
+    rgba(255, 255, 255, 0.234) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Exo 2", sans-serif;
+  border-radius: 10px;
+  height: fit-content;
+}
+.governmentPageFirstSectionLeftContent h1 {
+  font-weight: 500;
+}
+.governmentPageFirstSectionLeftContent h1 span {
+  color: #1d4394;
+  font-weight: 800;
+}
+.governmentPageFirstSectionLeftContent p {
+  color: #222222;
+  font-size: 20px;
+}
+/*  */
+
+/*  */
+@media screen and (max-width: 800px) {
+  .governmentPageFirstSectionMainContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

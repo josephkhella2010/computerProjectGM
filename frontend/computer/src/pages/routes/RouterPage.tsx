@@ -33,6 +33,10 @@ import AboutUsMainPage from "../AboutUsPage/AboutUsMainPage";
 import WhatAcceptPage from "../aboutUs/What Accept/WhatAcceptPage";
 import DropOffPage from "../aboutUs/DropOff/DropOffPage";
 import DataDestructionPage from "../aboutUs/DataDestruction/DataDestructionPage";
+import GovernmentPage from "../Industry/GovernmentPage/GovernmentPage";
+import EducationPage from "../Industry/EducationPage/EducationPage";
+import MedicalPage from "../Industry/MedicalPage/MedicalPage";
+import FinancePage from "../Industry/FinancePage/FinancePage";
 
 function AppRoutes() {
   return (
@@ -47,6 +51,10 @@ function AppRoutes() {
         <Route path="/recycle" element={<RecyclePage />} />
         <Route path="/drop-off" element={<DropOffPage />} />
         <Route path="/data-destruction" element={<DataDestructionPage />} />
+        <Route path="/government-page" element={<GovernmentPage />} />
+        <Route path="/education-page" element={<EducationPage />} />
+        <Route path="/medical-page" element={<MedicalPage />} />
+        <Route path="/finance-page" element={<FinancePage />} />
       </Routes>
       <Footer />
     </>
