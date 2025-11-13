@@ -3,7 +3,7 @@ import CommonServiceLowerSection from "../../../common Component/CommonServiceLo
 import styles from "./ServerRecyclePage.module.css";
 export default function ServerRecyclePage() {
   return (
-    <div>
+    <div className={styles.ServerRecyclePageMainContainer}>
       <CommonServiceAskAndAnswer />
       <CommonServiceLowerSection />
     </div>

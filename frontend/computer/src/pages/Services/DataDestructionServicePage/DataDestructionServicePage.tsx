@@ -4,10 +4,10 @@ import CommonServiceTestimony from "../../../common Component/CommonServiceTesti
 import styles from "./DataDestructionServicePage.module.css";
 export default function DataDestructionServicePage() {
   return (
-    <div>
+    <div className={styles.dataDestructionServicePageMainContainer}>
       <CommonServiceTestimony />
-      {/* <CommonServiceAskAndAnswer />
-      <CommonServiceLowerSection /> */}
+      <CommonServiceAskAndAnswer />
+      <CommonServiceLowerSection />
     </div>
   );
 }
