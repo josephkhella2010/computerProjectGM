@@ -189,7 +189,7 @@ export default function DesktopNavigation({ isScroll }: Props) {
             {activeMenu === "services" && (
               <div className={styles.subMenuDesktop}>
                 <Link
-                  to="/what-we-accept"
+                  to="/computer-recycle-page"
                   className={styles.subMenuDesktopLink}
                   style={{
                     whiteSpace: "normal",
@@ -201,14 +201,14 @@ export default function DesktopNavigation({ isScroll }: Props) {
                   Computer & Laptop Recycling
                 </Link>
                 <Link
-                  to="/aboutUs"
+                  to="/server-recycle-page"
                   className={styles.subMenuDesktopLink}
                   onClick={() => setActiveMenu(null)}
                 >
                   Server Recycling
                 </Link>
                 <Link
-                  to="/aboutUs"
+                  to="/destruction-data-service-page"
                   className={styles.subMenuDesktopLink}
                   onClick={() => setActiveMenu(null)}
                 >

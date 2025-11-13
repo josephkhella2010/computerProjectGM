@@ -1,0 +1,108 @@
+.commonServiceTestimonymainContainer {
+  padding: 100px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100dvw;
+  max-width: 2000px;
+}
+.commonServiceTestimonyUpperSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Exo 2", sans-serif;
+}
+
+.commonServiceTestimonyLowerMainSection {
+  width: 100%;
+  padding: 100px 30px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.commonServiceTestimonyLowerMainSectionContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.commonServiceTestimonyLowerSection {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.commonServiceTestimonymainSection {
+  background-color: rgb(206, 206, 206);
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  transition: transform 0.5s linear;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-image: linear-gradient(
+    180deg,
+    #c75353d7 0%,
+    #c75353a0 30%,
+    #c75353c1 70%,
+    #c75353d7 100%
+  );
+  color: #3f3b5a;
+}
+.commonServiceTestimonymainSection:hover {
+  transform: scale(1.03);
+}
+
+.commonServiceTestimonymainUpperContent {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.commonServiceTestimonymainUpperContent h3 {
+  font-size: 20px;
+}
+.commonServiceTestimonymainUpperContent p {
+  font-size: 20px;
+}
+.commonServiceTestimonymainUpperContent img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.commonServiceTestimonymainMiddleContent {
+  padding: 10px;
+}
+
+.commonServiceTestimonymainLowerContent {
+  font-size: 18px;
+}
+.ArrowLeft,
+.ArrowRight {
+  position: absolute;
+  font-size: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.ArrowLeft {
+  left: -5px;
+}
+.ArrowRight {
+  right: -5px;
+}
+/*  */
+
+@media (max-width: 900px) {
+}
+@media (max-width: 600px) {
+}

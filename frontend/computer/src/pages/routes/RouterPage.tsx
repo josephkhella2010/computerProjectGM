@@ -37,6 +37,9 @@ import GovernmentPage from "../Industry/GovernmentPage/GovernmentPage";
 import EducationPage from "../Industry/EducationPage/EducationPage";
 import MedicalPage from "../Industry/MedicalPage/MedicalPage";
 import FinancePage from "../Industry/FinancePage/FinancePage";
+import ComputerRecyclePage from "../Services/ComputerRecyclePage/ComputerRecyclePage";
+import ServerRecyclePage from "../Services/ServerRecycle/ServerRecyclePage";
+import DataDestructionServicePage from "../Services/DataDestructionServicePage/DataDestructionServicePage";
 
 function AppRoutes() {
   return (
@@ -55,6 +58,17 @@ function AppRoutes() {
         <Route path="/education-page" element={<EducationPage />} />
         <Route path="/medical-page" element={<MedicalPage />} />
         <Route path="/finance-page" element={<FinancePage />} />
+        <Route
+          path="/computer-recycle-page"
+          element={<ComputerRecyclePage />}
+        />
+
+        <Route path="/server-recycle-page" element={<ServerRecyclePage />} />
+
+        <Route
+          path="/destruction-data-service-page"
+          element={<DataDestructionServicePage />}
+        />
       </Routes>
       <Footer />
     </>
