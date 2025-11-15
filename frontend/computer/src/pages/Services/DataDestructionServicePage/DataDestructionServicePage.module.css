@@ -1,0 +1,107 @@
+.dataDestructionServicePageMainContainer {
+  padding: 100px 0px;
+}
+
+/* .dataDestructionServicePageFirstContainer */
+.dataDestructionServicePageFirstContainer {
+  padding: 100px 30px 50px 30px;
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 50px;
+  font-family: "Exo 2", sans-serif;
+}
+
+.dataDestructionServicePageFirstContainerLeftSection {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.dataDestructionServicePageFirstContainerLeftSection h1 {
+  font-size: 4rem;
+}
+.dataDestructionServicePageFirstContainerLeftSection p {
+  font-size: 2rem;
+}
+.dataDestructionServicePageFirstContainerRightSection {
+}
+.dataDestructionServicePageFirstContainerRightSection img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 15px;
+  height: 400px;
+}
+/* s.DataDestructionServicePageFourthContainer */
+.DataDestructionServicePageFourthContainer {
+  padding: 100px 30px;
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 50px;
+  font-family: "Exo 2", sans-serif;
+}
+
+.DataDestructionServicePageFourthContainerRightSection {
+}
+.DataDestructionServicePageFourthContainerLeftSection {
+  display: flex;
+  flex-direction: column;
+}
+.DataDestructionServicePageFourthContainerLeftSectionUpperContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0px 0px 50px 0px;
+  border-bottom: 1px solid black;
+}
+.DataDestructionServicePageFourthContainerLeftSectionUpperContent h3 {
+  color: rgb(217, 185, 185);
+}
+.DataDestructionServicePageFourthContainerLeftSectionUpperContent p {
+  font-weight: 600;
+}
+.DataDestructionServicePageFourthContainerLeftSectionLowerContent {
+  padding: 50px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+  left: 12px;
+}
+.DataDestructionServicePageFourthContainerLeftSectionLowerContent li {
+  list-style-type: square;
+}
+.DataDestructionServicePageFourthContainerRightSection img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 15px;
+  height: 400px;
+}
+
+/*  */
+@media screen and (max-width: 900px) {
+  .dataDestructionServicePageFirstContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .dataDestructionServicePageFirstContainerLeftSection h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .dataDestructionServicePageFirstContainerLeftSection p {
+    font-size: 20px;
+    text-align: center;
+  }
+  /* s.DataDestructionServicePageFourthContainer */
+  .DataDestructionServicePageFourthContainerLeftSectionUpperContent h3,
+  .DataDestructionServicePageFourthContainerLeftSectionUpperContent p,
+  .DataDestructionServicePageFourthContainerLeftSectionUpperContent h1 {
+    text-align: center;
+  }
+  .DataDestructionServicePageFourthContainerLeftSectionUpperContent h1 {
+    font-size: 24px;
+  }
+
+  .DataDestructionServicePageFourthContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

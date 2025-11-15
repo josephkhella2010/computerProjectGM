@@ -245,7 +245,7 @@ export default function DesktopNavigation({ isScroll }: Props) {
                   Education
                 </Link>
                 <Link
-                  to="medical-page"
+                  to="/medical-page"
                   className={styles.subMenuDesktopLink}
                   onClick={() => setActiveMenu(null)}
                 >

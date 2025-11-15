@@ -65,7 +65,7 @@
 }
 /* .ComputerRecyclePageSecondContainerMainContainer */
 .ComputerRecyclePageSecondContainerMainContainer {
-  padding: 100px 30px;
+  padding: 50px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,13 +87,14 @@
 }
 /* .ComputerRecyclePageThirdContainerMainContainer */
 .ComputerRecyclePageThirdContainerMainContainer {
-  padding: 100px 30px;
+  padding: 20px 30px 100px 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 70%;
+  width: 80%;
   justify-content: space-between;
   gap: 50px;
   margin: auto auto;
+  font-family: "Exo 2", sans-serif;
 }
 .ComputerRecyclePageThirdContainerSection {
   padding: 30px;
@@ -101,20 +102,24 @@
   border: 1px solid black;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 .ComputerRecyclePageThirdContainerSection h3 {
   font-size: 30px;
 }
-.ComputerRecyclePageThirdContainerSection p {
-  font-family: "Exo 2", sans-serif;
-}
+
 .ComputerRecyclePageThirdContainerSection:hover {
   background-color: #8a3232;
   background-image: linear-gradient(180deg, #e8e8e8 96%, #8a3232 96%);
   box-shadow: 1px 4px 35px 0px rgba(0, 0, 0, 0.04);
 }
 
+.ComputerRecyclePageThirdContainerMenu {
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 /* .ComputerRecyclePageFourthContainerMainContainer */
 .ComputerRecyclePageFourthContainerMainContainer {
   padding: 100px 30px;
@@ -235,6 +240,12 @@
 }
 /*  */
 
+@media screen and (max-width: 1250px) {
+  .ComputerRecyclePageThirdContainerMainContainer {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+}
 @media screen and (max-width: 1100px) {
   .ComputerRecyclePageSecondContainerMainContainer p {
     width: 50%;
@@ -248,17 +259,19 @@
   .ComputerRecyclePageSecondContainerMainContainer p {
     width: 70%;
   }
-  .ComputerRecyclePageThirdContainerMainContainer {
-    grid-template-columns: repeat(2, 1fr);
-    width: 100%;
-  }
 }
 @media screen and (max-width: 900px) {
+  .ComputerRecyclePageSecondContainerMainContainer h1 {
+    width: 100%;
+    text-align: center;
+  }
+
   .ComputerRecyclePageSecondContainerMainContainer p {
     width: 70%;
   }
   .ComputerRecyclePageFourthContainerMainContainer {
     grid-template-columns: repeat(1, 1fr);
+    width: 100%;
   }
   .ComputerRecyclePageFifthContainerLowerSection {
     display: flex;
@@ -281,6 +294,13 @@
     align-items: center;
   }
 }
+@media screen and (max-width: 700px) {
+  .ComputerRecyclePageThirdContainerMainContainer {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .ComputerRecyclePageFirstContainerMainContainer {
     grid-template-columns: repeat(1, 1fr);
@@ -294,10 +314,10 @@
   .ComputerRecyclePageSecondContainerMainContainer p {
     width: 100%;
   }
-  .ComputerRecyclePageThirdContainerMainContainer {
-    grid-template-columns: repeat(1, 1fr);
-    width: 100%;
+  .ComputerRecyclePageSecondContainerMainContainer {
+    text-align: center;
   }
+
   .ComputerRecyclePageFifthContainerLowerSection h2 {
     font-size: 20px;
   }

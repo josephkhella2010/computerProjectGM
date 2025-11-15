@@ -1,0 +1,55 @@
+.ContactBarMainContainer {
+  height: 60px;
+  width: 100%;
+  background-color: #c75353;
+  display: flex;
+  justify-content: space-between;
+}
+.ContactBarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  width: 100%;
+}
+.ContactBarContainerLeftSection {
+  display: flex;
+  gap: 10px;
+}
+.ContactBarContainerLeftSectionIcon {
+  color: #ffffff;
+}
+.ContactBarContainerLeftSectionIconContainer {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #d9b9b9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ContactBarContainerMiddleSection {
+  color: #ffffff;
+  font-family: "Exo 2", sans-serif;
+}
+
+.ContactBarContainerRightSection {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.ContactBarContainerRightSection li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.ContactBarContainerRightSection li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Exo 2", sans-serif;
+}
+.ContactBarContainerRightSectionIcon {
+  color: #d9b9b9;
+}

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import DesktopNavigation from "./childComponent/DesktopNavigation";
 import MobileNavBar from "./childComponent/MobileNavBar";
 import styles from "./Navigation.module.css";
+import ContactBar from "../../common Component/ContactBar";
 export default function NavigationSection() {
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [isScroll, setIsScroll] = useState<boolean>(false);
@@ -35,12 +36,15 @@ export default function NavigationSection() {
   });
 
   return (
-    <div className={styles.navbarMainWrapper}>
-      {isMobile ? (
-        <MobileNavBar isScroll={isScroll} setIsScroll={setIsScroll} />
-      ) : (
-        <DesktopNavigation isScroll={isScroll} />
-      )}
+    <div>
+      <div className={styles.navbarMainWrapper}>
+        {!isMobile && <ContactBar />}
+        {isMobile ? (
+          <MobileNavBar isScroll={isScroll} setIsScroll={setIsScroll} />
+        ) : (
+          <DesktopNavigation isScroll={isScroll} />
+        )}
+      </div>
     </div>
   );
 }

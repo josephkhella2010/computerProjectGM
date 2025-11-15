@@ -45,6 +45,7 @@ function AppRoutes() {
   return (
     <>
       <NavigationSection />
+
       <Routes>
         <Route path="/" element={<HomeSection />} />
         <Route path="/contactUs" element={<ContactUsPage />} />
@@ -70,6 +71,7 @@ function AppRoutes() {
           element={<DataDestructionServicePage />}
         />
       </Routes>
+
       <Footer />
     </>
   );
