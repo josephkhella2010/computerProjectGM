@@ -1,7 +1,6 @@
 .DataDestructionPageMainContainer {
-  background-color: orangered;
   min-height: 100dvh;
-  padding-top: 60px;
+  padding-top: 0px;
   font-family: "Exo 2", sans-serif;
 }
 .DataDestructionPageContainer {
