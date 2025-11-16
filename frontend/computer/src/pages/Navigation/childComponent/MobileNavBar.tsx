@@ -124,6 +124,15 @@ const menuArr = [
 
 export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
   const [showMenu, setShowMenu] = useState<boolean>(false);
+  const [showSubMenu, setShowSubMenu] = useState<boolean[]>(
+    Array(menuArr.length).fill(false)
+  );
+  const [containerHeights, setContainerHeights] = useState<number[]>(
+    Array(menuArr.length).fill(0)
+  );
+  const subMenuRef = useRef<Array<HTMLDivElement | null>>([]);
+  const sideBarRef = useRef<HTMLDivElement>(null);
+
   const addClassActive = showMenu ? styles.active : "";
   const addClassShow = showMenu ? styles.show : "";
   const navigate = useNavigate();
@@ -139,14 +148,6 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
       document.body.style.overflow = "auto";
     };
   }, [showMenu, setIsScroll]);
-
-  const [showSubMenu, setShowSubMenu] = useState<boolean[]>(
-    Array(menuArr.length).fill(false)
-  );
-  const [containerHeights, setContainerHeights] = useState<number[]>(
-    Array(menuArr.length).fill(0)
-  );
-  const subMenuRef = useRef<Array<HTMLDivElement | null>>([]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -174,8 +175,6 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
     setShowSubMenu(Array(menuArr.length).fill(false));
   };
 
-  const sideBarRef = useRef<HTMLDivElement>(null);
-
   const adjustSidebarHeight = () => {
     if (!sideBarRef.current) return;
 
@@ -192,13 +191,13 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
   };
 
   const closeMenu = () => {
-    setShowMenu(false); // close menu
-    setShowSubMenu(Array(menuArr.length).fill(false)); // collapse all submenus
+    setShowMenu(false);
+    setShowSubMenu(Array(menuArr.length).fill(false));
     if (sideBarRef.current) {
       sideBarRef.current.style.height = "auto";
-      sideBarRef.current.style.overflowY = "hidden"; // reset scroll
+      sideBarRef.current.style.overflowY = "hidden";
     }
-    document.body.style.overflow = "auto"; // restore body scroll
+    document.body.style.overflow = "auto";
   };
 
   useEffect(() => {
