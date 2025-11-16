@@ -24,10 +24,11 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #d9b9b9;
+  background-color: #e69191;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .ContactBarContainerMiddleSection {
   color: #ffffff;

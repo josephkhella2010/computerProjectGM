@@ -7,17 +7,29 @@ export default function ContactBar() {
     <div className={styles.ContactBarMainContainer}>
       <div className={styles.ContactBarContainer}>
         <div className={styles.ContactBarContainerLeftSection}>
-          <span className={styles.ContactBarContainerLeftSectionIconContainer}>
+          <a
+            href="https://www.facebook.com/marco.f.hanna.1"
+            target="_blank"
+            className={styles.ContactBarContainerLeftSectionIconContainer}
+          >
             <CiFacebook className={styles.ContactBarContainerLeftSectionIcon} />
-          </span>
-          <span className={styles.ContactBarContainerLeftSectionIconContainer}>
+          </a>
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            className={styles.ContactBarContainerLeftSectionIconContainer}
+          >
             <CiInstagram
               className={styles.ContactBarContainerLeftSectionIcon}
             />
-          </span>
-          <span className={styles.ContactBarContainerLeftSectionIconContainer}>
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            className={styles.ContactBarContainerLeftSectionIconContainer}
+          >
             <CiLinkedin className={styles.ContactBarContainerLeftSectionIcon} />
-          </span>
+          </a>
         </div>
         <div className={styles.ContactBarContainerMiddleSection}>
           <p>Free Electronics Recycling for Bulk Pickups</p>
