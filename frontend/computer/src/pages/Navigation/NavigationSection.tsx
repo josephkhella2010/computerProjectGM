@@ -6,20 +6,28 @@ import ContactBar from "../../common Component/ContactBar";
 export default function NavigationSection() {
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [isScroll, setIsScroll] = useState<boolean>(false);
+  const [showContactBar, setShowContactBar] = useState<boolean>(false);
+
   useEffect(() => {
+    const scrollContainer = document.querySelector(".appWrapper");
+
+    if (!scrollContainer) return;
+
     const handleScroll = () => {
-      if (window.scrollY > 60) {
+      if (scrollContainer.scrollTop > 60) {
         setIsScroll(true);
       } else {
         setIsScroll(false);
       }
     };
-    window.addEventListener("scroll", handleScroll);
+
+    scrollContainer.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      scrollContainer.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 800) {
@@ -34,11 +42,25 @@ export default function NavigationSection() {
       window.removeEventListener("resize", handleResize);
     };
   });
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 750) {
+        setShowContactBar(true);
+      } else {
+        setShowContactBar(false);
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
 
   return (
-    <div>
+    <div className={styles.mainContainerNavBar}>
       <div className={styles.navbarMainWrapper}>
-        {!isMobile && <ContactBar />}
+        {showContactBar && <ContactBar />}
         {isMobile ? (
           <MobileNavBar isScroll={isScroll} setIsScroll={setIsScroll} />
         ) : (

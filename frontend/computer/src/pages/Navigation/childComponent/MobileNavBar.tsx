@@ -128,7 +128,6 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
   const addClassShow = showMenu ? styles.show : "";
   const navigate = useNavigate();
 
-  /* Control body overflow */
   useEffect(() => {
     if (showMenu) {
       document.body.style.overflow = "hidden";
@@ -141,7 +140,6 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
     };
   }, [showMenu, setIsScroll]);
 
-  /* Submenu state */
   const [showSubMenu, setShowSubMenu] = useState<boolean[]>(
     Array(menuArr.length).fill(false)
   );
@@ -150,7 +148,6 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
   );
   const subMenuRef = useRef<Array<HTMLDivElement | null>>([]);
 
-  /* Measure submenu heights */
   useEffect(() => {
     const handleResize = () => {
       const heights = subMenuRef.current.map(
@@ -166,7 +163,6 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
     return () => window.removeEventListener("resize", handleResize);
   }, [showSubMenu]);
 
-  /* Toggle submenu */
   const toggleSubMenu = (index: number) => {
     setShowSubMenu((prev) => {
       const newState = [...prev];
@@ -177,6 +173,44 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
   const closeSubMenu = () => {
     setShowSubMenu(Array(menuArr.length).fill(false));
   };
+
+  const sideBarRef = useRef<HTMLDivElement>(null);
+
+  const adjustSidebarHeight = () => {
+    if (!sideBarRef.current) return;
+
+    const contentHeight = sideBarRef.current.scrollHeight;
+    const viewportHeight = window.innerHeight;
+
+    if (contentHeight < viewportHeight) {
+      sideBarRef.current.style.height = `${contentHeight}px`;
+      sideBarRef.current.style.overflowY = "hidden";
+    } else {
+      sideBarRef.current.style.height = "100dvh";
+      sideBarRef.current.style.overflowY = "auto";
+    }
+  };
+
+  const closeMenu = () => {
+    setShowMenu(false); // close menu
+    setShowSubMenu(Array(menuArr.length).fill(false)); // collapse all submenus
+    if (sideBarRef.current) {
+      sideBarRef.current.style.height = "auto";
+      sideBarRef.current.style.overflowY = "hidden"; // reset scroll
+    }
+    document.body.style.overflow = "auto"; // restore body scroll
+  };
+
+  useEffect(() => {
+    if (showMenu) {
+      adjustSidebarHeight();
+    }
+  }, [showMenu, showSubMenu]);
+
+  useEffect(() => {
+    window.addEventListener("resize", adjustSidebarHeight);
+    return () => window.removeEventListener("resize", adjustSidebarHeight);
+  }, []);
 
   return (
     <div className={styles.MainNavBar}>
@@ -196,12 +230,17 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
           className={`${styles.mobileOverLay} ${addClassShow}`}
           onClick={() => setShowMenu(false)}
         >
-          <div onClick={(e) => e.stopPropagation()} className={styles.sideMenu}>
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className={styles.sideMenu}
+            ref={sideBarRef}
+          >
             <div
               className={styles.backDiv}
               onClick={() => {
                 setShowMenu(false);
                 setIsScroll(true);
+                closeMenu();
               }}
             >
               <BiArrowBack className={styles.backIcon} />
