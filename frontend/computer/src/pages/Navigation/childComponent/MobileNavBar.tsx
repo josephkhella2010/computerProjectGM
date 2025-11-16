@@ -248,78 +248,87 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
 
             <ul className={styles.MenuMobileMainContainer}>
               <div className={styles.subMenuMobileMainContainer}>
-                <div className={styles.mobileMainSubmenuConatainer}>
-                  {menuArr.map((item, index) => (
-                    <div
-                      className={styles.mobileMainSubmenuSection}
-                      key={index}
-                      ref={(el) => {
-                        subMenuRef.current[index] = el;
-                      }}
-                    >
-                      <div
-                        className={styles.mobileMainSubmenuSectionHeader}
-                        onClick={() => toggleSubMenu(index)}
-                      >
-                        <li>{item.mainLink}</li>
-                        <IoMdArrowDropdown
-                          style={{
-                            color: "#ffffff",
-                            transform: showSubMenu[index]
-                              ? "rotate(180deg)"
-                              : "rotate(0deg)",
-                            transition: "transform 0.3s ease",
+                <div className={styles.subMenuMobileMainContainerSection}>
+                  <div
+                    className={styles.subMenuMobileMainContainerSectionContent}
+                  >
+                    <div className={styles.mobileMainSubmenuConatainer}>
+                      {menuArr.map((item, index) => (
+                        <div
+                          className={styles.mobileMainSubmenuSection}
+                          key={index}
+                          ref={(el) => {
+                            subMenuRef.current[index] = el;
                           }}
-                        />
-                      </div>
+                        >
+                          <div
+                            className={styles.mobileMainSubmenuSectionHeader}
+                            onClick={() => toggleSubMenu(index)}
+                          >
+                            <li>{item.mainLink}</li>
+                            <IoMdArrowDropdown
+                              style={{
+                                color: "#ffffff",
+                                transform: showSubMenu[index]
+                                  ? "rotate(180deg)"
+                                  : "rotate(0deg)",
+                                transition: "transform 0.3s ease",
+                              }}
+                            />
+                          </div>
 
-                      <div
-                        className={styles.mobileMainSubmenuLowerSection}
-                        style={{
-                          maxHeight: showSubMenu[index]
-                            ? `${containerHeights[index]}px`
-                            : "0px",
-                          overflow: "hidden",
-                          transition: "max-height 0.3s ease",
-                        }}
+                          <div
+                            className={styles.mobileMainSubmenuLowerSection}
+                            style={{
+                              maxHeight: showSubMenu[index]
+                                ? `${containerHeights[index]}px`
+                                : "0px",
+                              overflow: "hidden",
+                              transition: "max-height 0.3s ease",
+                            }}
+                          >
+                            <ul className={styles.subMenuMobileMainMenu}>
+                              {item.subMenuLink.map((it, i) => (
+                                <li
+                                  key={i}
+                                  className={styles.subMenuMobileMainLink}
+                                >
+                                  <Link
+                                    to={it.path}
+                                    className={styles.subMenuMobileLink}
+                                    onClick={() => {
+                                      setShowMenu(false), closeSubMenu();
+                                    }}
+                                  >
+                                    {it.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      ))}
+                      <li
+                        onClick={() => setShowMenu(false)}
+                        className={styles.linksContainer}
                       >
-                        <ul className={styles.subMenuMobileMainMenu}>
-                          {item.subMenuLink.map((it, i) => (
-                            <li
-                              key={i}
-                              className={styles.subMenuMobileMainLink}
-                            >
-                              <Link
-                                to={it.path}
-                                className={styles.subMenuMobileLink}
-                                onClick={() => {
-                                  setShowMenu(false), closeSubMenu();
-                                }}
-                              >
-                                {it.name}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                        <Link to="/contactUs" className={styles.links}>
+                          Contact Us
+                        </Link>
+                      </li>
+                      <button
+                        onClick={() => setShowMenu(false)}
+                        className={styles.recycleBtnMobile}
+                      >
+                        <Link
+                          to="/recycle"
+                          className={styles.recycleBtnMobileLink}
+                        >
+                          Recycle Now
+                        </Link>
+                      </button>
                     </div>
-                  ))}
-                  <li
-                    onClick={() => setShowMenu(false)}
-                    className={styles.linksContainer}
-                  >
-                    <Link to="/contactUs" className={styles.links}>
-                      Contact Us
-                    </Link>
-                  </li>
-                  <button
-                    onClick={() => setShowMenu(false)}
-                    className={styles.recycleBtnMobile}
-                  >
-                    <Link to="/recycle" className={styles.recycleBtnMobileLink}>
-                      Recycle Now
-                    </Link>
-                  </button>
+                  </div>
                 </div>
               </div>
             </ul>

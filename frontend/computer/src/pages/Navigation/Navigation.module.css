@@ -357,10 +357,10 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 70%;
   justify-content: center;
   padding: 30px;
   margin: auto auto;
+  width: 85%;
 }
 
 .mobileMainSubmenuSection {
@@ -374,8 +374,6 @@
   align-items: flex-end;
   padding: 10px 0px;
   gap: 10px;
-  justify-content: space-between;
-  width: 130px;
 }
 .mobileMainSubmenuSectionHeader li {
   list-style: none;
@@ -403,8 +401,8 @@
   text-decoration: none;
   cursor: pointer;
   position: relative;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 550;
   font-family: "Exo 2", sans-serif;
   color: #d9b9b9;
   /*   color: #31455a;
@@ -414,6 +412,7 @@
 .mobileMainSubmenuConatainer {
   display: flex;
   gap: 20px;
+  width: 100%;
 }
 .subMenuMobileMainMenu {
   display: flex;
@@ -482,4 +481,14 @@
   .sideMenu {
     width: 100%;
   }
+}
+
+.subMenuMobileMainContainerSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.subMenuMobileMainContainerSectionContent {
+  width: 60%;
 }
