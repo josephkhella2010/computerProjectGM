@@ -197,16 +197,7 @@
   list-style: none;
   cursor: pointer;
 }
-/* .sideMenu ul li a {
-  text-decoration: none;
-  cursor: pointer;
-  position: relative;
-  font-family: "Roboto Condensed", sans-serif !important;
-  font-size: 18px;
-  font-weight: 700;
-    color: #ffffff;
-  color: #1d4394;
-} */
+
 .backDiv {
   display: flex;
   padding: 30px 20px;
@@ -240,8 +231,6 @@
 }
 /* menus and submenus */
 .menuContainerDesktop {
-  /*   background-color: aqua;
- */
   position: relative;
   height: 100%;
   display: flex;
@@ -294,9 +283,7 @@
   background-color: #d9b9b9;
   color: #ffffff;
 }
-/* .menuContainerDesktop:hover > .subMenuDesktop {
-  display: flex;
-} */
+
 .menuContainerDesktop li {
   width: fit-content;
   position: relative;
@@ -405,8 +392,6 @@
   font-weight: 550;
   font-family: "Exo 2", sans-serif;
   color: #d9b9b9;
-  /*   color: #31455a;
- */
 }
 
 .mobileMainSubmenuConatainer {
@@ -430,6 +415,16 @@
   font-size: 700;
   cursor: pointer;
   font-size: 22px;
+}
+
+.subMenuMobileMainContainerSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.subMenuMobileMainContainerSectionContent {
+  width: 60%;
 }
 /*  */
 
@@ -481,14 +476,4 @@
   .sideMenu {
     width: 100%;
   }
-}
-
-.subMenuMobileMainContainerSection {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.subMenuMobileMainContainerSectionContent {
-  width: 60%;
 }
