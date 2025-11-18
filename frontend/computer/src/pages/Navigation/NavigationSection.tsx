@@ -30,7 +30,7 @@ export default function NavigationSection() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 800) {
+      if (window.innerWidth < 795) {
         setIsMobile(true);
       } else {
         setIsMobile(false);
