@@ -15,10 +15,7 @@ export default function AboutUsPage() {
               {" "}
               <a href="/#/aboutUs">About us</a>
             </li>
-            <li>
-              {" "}
-              <a href="/#/product">Products</a>
-            </li>
+
             <li>
               {" "}
               <a href="/#/contactUs">Contact Us</a>
