@@ -1,14 +1,19 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const PORT = 3000;
+require("dotenv").config();
+
 app.use(cors());
 app.use(express.json());
 /* const getProducts = require("./ApiRoutes/ProductRoutes");
-app.use(getProducts); */
+app.use(getProducts); 
 app.use("/api", require("./ApiRoutes/ProductRoutSqlite"));
 app.get("/test", (req, res) => res.send("Server is running!"));
+*/
+app.use("/api/send-email", require("./ApiRoutes/sendEmail"));
 
-app.listen(PORT, () =>
-  console.log(`🚀 Server running on http://localhost:${PORT}`)
+app.listen(process.env.PORT, () =>
+  console.log(
+    `🚀 Server running on http://localhost:${process.env.PORT || 3100}`
+  )
 );

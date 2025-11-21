@@ -1,6 +1,5 @@
 import { FaCheck } from "react-icons/fa6";
 import styles from "./recycle.module.css";
-import { ToastContainer } from "react-toastify";
 import MapSection from "./childComponent/MapSection";
 import { useNavigate } from "react-router-dom";
 import CommonFormSection from "../../common Component/CommonFormSection";
@@ -23,8 +22,6 @@ export default function RecyclePage() {
 
   return (
     <div className={styles.recycleMainWarpper}>
-      <ToastContainer />
-
       <div className={styles.recycleWarpper}>
         <div className={styles.recycleUpperContainer}>
           <h3>Pickup & Drop-Off</h3>
