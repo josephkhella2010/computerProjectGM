@@ -6,6 +6,7 @@ import HomePageSecondContainer from "./HomePageSecondContainer";
 import HomePageSeventhContainer from "./HomePageSeventhContainer";
 import HomePageSixthContainer from "./HomePageSixthContainer";
 import HomePageThirdContainer from "./HomePageThirdContainer";
+import HomePageTrackContainer from "./HomePageTrackContainer";
 
 export default function HomeSection() {
   return (
@@ -13,6 +14,7 @@ export default function HomeSection() {
       <div className={styles.homepageMainContainer}>
         <HomePageFirstContainer />
         <HomePageSecondContainer />
+        <HomePageTrackContainer />
         <HomePageThirdContainer />
         <HomePageFourthContainer />
         <HomePageFifthContainer />

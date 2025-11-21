@@ -566,6 +566,77 @@
 .homePageInnerSection p a:hover {
   text-decoration: underline;
 }
+/* HomePageTrackContainer */
+.trackSkillMainContainer {
+  padding: 50px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trackSkillContainer {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  display: flex;
+  align-items: center;
+  border-radius: 13px;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.232);
+}
+
+.trackSkillSection {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  left: 0;
+  white-space: nowrap;
+  will-change: transform;
+  animation: scroll 25s linear infinite;
+  background-color: #c75353;
+  height: 100%;
+}
+
+.trackSkillContent {
+  font-size: 30px;
+  padding: 30px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-weight: 800;
+
+  font-family: "Exo 2", sans-serif;
+  text-shadow: 0 0 0 #4f93ff; /* start with no shadow */
+  animation: neonPulse 1.5s ease-in-out infinite alternate;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes neonPulse {
+  0% {
+    text-shadow: 0 0 0 #4f93ff;
+  }
+  30% {
+    text-shadow: 0 0 5px #4f93ff, 0 0 10px #4f93ff, 0 0 15px #4f93ff,
+      0 0 20px #4f93ff, 0 0 30px #4f93ff;
+  }
+  50% {
+    text-shadow: 0 0 5px #4f93ff, 0 0 10px #4f93ff, 0 0 15px #4f93ff,
+      0 0 20px #4f93ff, 0 0 30px #4f93ff;
+  }
+  80% {
+    text-shadow: 0 0 5px #4f93ff, 0 0 10px #4f93ff, 0 0 15px #4f93ff,
+      0 0 20px #4f93ff, 0 0 30px #4f93ff;
+  }
+  100% {
+    text-shadow: 0 0 0 #4f93ff;
+  }
+}
 
 /*  */
 @media screen and (max-width: 950px) {
