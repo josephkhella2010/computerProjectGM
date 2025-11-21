@@ -281,7 +281,6 @@ import { useLocation } from "react-router-dom";
 import styles from "./CommonFormSection.module.css";
 import { useRef, useState } from "react";
 import { toast } from "react-toastify";
-import emailjs from "@emailjs/browser";
 import axios from "axios";
 
 interface FieldType {
