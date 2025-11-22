@@ -1,12 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import ReduxSliceReducer from "../ReduxSlice/ProductSlice";
-//import loadingSliceReducer from "../ReduxSlice/LoadingSlice";
+import loadingSliceReducer from "../ReduxSlice/LoadingSlice";
 import IsLoadingSliceReducer from "../ReduxSlice/IsLoadingSlice";
 // Create Store
 const store = configureStore({
   reducer: {
     computerData: ReduxSliceReducer,
-    // isLoadingReducer: loadingSliceReducer,
+    isLoadingReducer: loadingSliceReducer,
     IsLoadingSlice: IsLoadingSliceReducer,
   },
 });

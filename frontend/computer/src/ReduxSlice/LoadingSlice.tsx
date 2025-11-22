@@ -1,4 +1,4 @@
-/* import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import type { LoadingType } from "../helps/interfaces";
 const initialState: LoadingType = {
   isLoading: false,
@@ -13,4 +13,4 @@ const loadingSlice = createSlice({
   },
 });
 export const { setIsLoading } = loadingSlice.actions;
-export default loadingSlice.reducer; */
+export default loadingSlice.reducer;
