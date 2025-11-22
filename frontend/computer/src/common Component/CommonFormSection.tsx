@@ -282,7 +282,6 @@ import styles from "./CommonFormSection.module.css";
 import { useRef, useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
-import LoadingSection from "../pages/LoadingPage/LoadingSection";
 
 interface FieldType {
   label: string;
@@ -396,7 +395,7 @@ export default function CommonFormSection() {
   const location = useLocation();
   console.log(location.pathname);
   const formRef = useRef<HTMLFormElement | null>(null);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [_isLoading, setIsLoading] = useState<boolean>(false);
   const [formInfo, setFormInfo] = useState<FormInfoType>({
     firstname: "",
     lastname: "",
@@ -484,8 +483,15 @@ export default function CommonFormSection() {
   } */
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsLoading(true);
+    for (const key in formInfo) {
+      if (key === "message") continue;
 
+      if (!formInfo[key as keyof FormInfoType]) {
+        toast.error("Please fill all fields");
+        return;
+      }
+    }
+    setIsLoading(true);
     try {
       const newSms = { ...formInfo };
 
@@ -535,7 +541,6 @@ export default function CommonFormSection() {
 
   return (
     <div className={styles.recycleMiddleContainer}>
-      {isLoading ? <LoadingSection /> : ""}
       <div className={styles.recycleMiddleContainerLeftSection}>
         {getHeader() && <h5>{getHeader()}</h5>}
         {location.pathname === "/recycle" && (
