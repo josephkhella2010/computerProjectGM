@@ -471,15 +471,13 @@ export default function CommonFormSection() {
   async function sendRequestWithRetry(url: string, data: any) {
     while (true) {
       try {
-        const response = await axios.post(url, data, { timeout: 10000 }); // small timeout
-        return response; // success → exit loop
+        const response = await axios.post(url, data, {
+          timeout: 10000, // short timeout to detect wakeup
+        });
+        return response; // success!
       } catch (err: any) {
-        if (err.code === "ECONNABORTED") {
-          console.log("Server sleeping... retrying in 5 seconds");
-          await wait(5000); // wait and retry
-        } else {
-          throw err; // real error → break
-        }
+        console.log("Server not ready yet... retrying in 5 seconds");
+        await wait(5000);
       }
     }
   }
@@ -490,9 +488,9 @@ export default function CommonFormSection() {
     try {
       const newSms = { ...formInfo };
 
-      toast.info("Waking up server… please wait.");
-
-      const response = await sendRequestWithRetry(
+      /*       toast.info("Waking up server… please wait.");
+       */
+      const response = await axios.post(
         "https://computerprojectgm-backend-environment.onrender.com/api/send-email",
         newSms
       );

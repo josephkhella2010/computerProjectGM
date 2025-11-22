@@ -36,15 +36,15 @@ router.post("/", async (req, res) => {
   };
   try {
     if (
-      !firstname ||
-      !lastname ||
-      !email ||
-      !phone ||
-      !street ||
-      !city ||
-      !zipcode ||
-      !amount ||
-      !type
+      !firstname?.trim() ||
+      !lastname?.trim() ||
+      !email?.trim() ||
+      !phone?.trim() ||
+      !street?.trim() ||
+      !city?.trim() ||
+      !zipcode?.trim() ||
+      type === "" ||
+      amount === ""
     ) {
       return res.status(401).json({ sms: "please fill all field" });
     }
