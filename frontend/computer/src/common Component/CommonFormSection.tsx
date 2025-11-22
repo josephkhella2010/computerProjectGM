@@ -410,7 +410,7 @@ export default function CommonFormSection() {
     message: "",
   });
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  /*  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     for (const key in formInfo) {
       if (key === "message") continue;
@@ -437,10 +437,7 @@ export default function CommonFormSection() {
       };
       const response = await axios.post(
         "https://computerprojectgm-backend-environment.onrender.com/api/send-email",
-        newSms,
-        {
-          timeout: 120000,
-        }
+        newSms
       );
       const sms = response.data.sms;
 
@@ -468,7 +465,59 @@ export default function CommonFormSection() {
     } finally {
       setIsLoading(false);
     }
+  }; */
+  const wait = (ms: number) => new Promise((res) => setTimeout(res, ms));
+
+  async function sendRequestWithRetry(url: string, data: any) {
+    while (true) {
+      try {
+        const response = await axios.post(url, data, { timeout: 10000 }); // small timeout
+        return response; // success → exit loop
+      } catch (err: any) {
+        if (err.code === "ECONNABORTED") {
+          console.log("Server sleeping... retrying in 5 seconds");
+          await wait(5000); // wait and retry
+        } else {
+          throw err; // real error → break
+        }
+      }
+    }
+  }
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const newSms = { ...formInfo };
+
+      toast.info("Waking up server… please wait.");
+
+      const response = await sendRequestWithRetry(
+        "https://computerprojectgm-backend-environment.onrender.com/api/send-email",
+        newSms
+      );
+
+      toast.success(response.data.sms);
+
+      setFormInfo({
+        firstname: "",
+        lastname: "",
+        email: "",
+        phone: "",
+        street: "",
+        city: "",
+        zipcode: "",
+        type: "",
+        amount: "",
+        message: "",
+      });
+    } catch (error) {
+      toast.error("Something went wrong.");
+    } finally {
+      setIsLoading(false);
+    }
   };
+
   function getHeader() {
     let name = "";
     switch (location.pathname) {
