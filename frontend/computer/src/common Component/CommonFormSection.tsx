@@ -466,9 +466,10 @@ export default function CommonFormSection() {
       setIsLoading(false);
     }
   }; */
+  /* 
   const wait = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
-  /*   async function sendRequestWithRetry(url: string, data: any) {
+    async function sendRequestWithRetry(url: string, data: any) {
     while (true) {
       try {
         const response = await axios.post(url, data, {
