@@ -282,6 +282,7 @@ import styles from "./CommonFormSection.module.css";
 import { useRef, useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
+import LoadingSection from "../pages/LoadingPage/LoadingSection";
 
 interface FieldType {
   label: string;
@@ -395,6 +396,7 @@ export default function CommonFormSection() {
   const location = useLocation();
   console.log(location.pathname);
   const formRef = useRef<HTMLFormElement | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [formInfo, setFormInfo] = useState<FormInfoType>({
     firstname: "",
     lastname: "",
@@ -418,6 +420,7 @@ export default function CommonFormSection() {
         return;
       }
     }
+    setIsLoading(true);
 
     try {
       const newSms: FormInfoType = {
@@ -434,7 +437,10 @@ export default function CommonFormSection() {
       };
       const response = await axios.post(
         "https://computerprojectgm-backend-environment.onrender.com/api/send-email",
-        newSms
+        newSms,
+        {
+          timeout: 60000,
+        }
       );
       const sms = response.data.sms;
 
@@ -451,8 +457,16 @@ export default function CommonFormSection() {
         amount: "",
         message: "",
       });
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
+      if (error.code === "ECONNABORTED") {
+        toast.error("Server is waking up… please try again in a moment.");
+      } else {
+        toast.error("Something went wrong. Try again.");
+      }
+      console.log(error);
+    } finally {
+      setIsLoading(false);
     }
   };
   function getHeader() {
@@ -473,6 +487,7 @@ export default function CommonFormSection() {
 
   return (
     <div className={styles.recycleMiddleContainer}>
+      {isLoading ? <LoadingSection /> : ""}
       <div className={styles.recycleMiddleContainerLeftSection}>
         {getHeader() && <h5>{getHeader()}</h5>}
         {location.pathname === "/recycle" && (
