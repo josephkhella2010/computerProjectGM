@@ -158,7 +158,7 @@ router.post("/", async (req, res) => {
   } catch (error) {
     console.error("Brevo Error:", error.response?.text || error.message);
     res.status(500).json({
-      error: "Email failed",
+      error: "Email Failed",
       details: error.response?.text || error.message,
     });
   }
