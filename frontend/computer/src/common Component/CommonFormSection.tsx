@@ -497,8 +497,6 @@ export default function CommonFormSection() {
     try {
       const newSms = { ...formInfo };
 
-      /*       toast.info("Waking up server… please wait.");
-       */
       const response = await axios.post(
         "https://computerprojectgm-backend-environment.onrender.com/api/send-email",
         newSms
