@@ -433,7 +433,7 @@ export default function CommonFormSection() {
         message: formInfo.message,
       };
       const response = await axios.post(
-        "http://localhost:3000/api/send-email",
+        "https://computerprojectgm-backend-environment.onrender.com/api/send-email",
         newSms
       );
       const sms = response.data.sms;
