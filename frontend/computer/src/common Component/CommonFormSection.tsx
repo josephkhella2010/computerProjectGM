@@ -282,6 +282,8 @@ import styles from "./CommonFormSection.module.css";
 import { useRef, useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
+import { setIsLoading } from "../ReduxSlice/IsLoadingSlice";
+import { useDispatch } from "react-redux";
 
 interface FieldType {
   label: string;
@@ -392,10 +394,10 @@ export interface FormInfoType {
   message?: string;
 }
 export default function CommonFormSection() {
+  const dispatch = useDispatch();
   const location = useLocation();
   console.log(location.pathname);
   const formRef = useRef<HTMLFormElement | null>(null);
-  const [_isLoading, setIsLoading] = useState<boolean>(false);
   const [formInfo, setFormInfo] = useState<FormInfoType>({
     firstname: "",
     lastname: "",
@@ -491,7 +493,7 @@ export default function CommonFormSection() {
         return;
       }
     }
-    setIsLoading(true);
+    dispatch(setIsLoading(true));
     try {
       const newSms = { ...formInfo };
 
@@ -519,7 +521,7 @@ export default function CommonFormSection() {
     } catch (error) {
       toast.error("Something went wrong.");
     } finally {
-      setIsLoading(false);
+      dispatch(setIsLoading(false));
     }
   };
 
