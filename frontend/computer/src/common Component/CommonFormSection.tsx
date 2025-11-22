@@ -468,7 +468,7 @@ export default function CommonFormSection() {
   }; */
   const wait = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
-  async function sendRequestWithRetry(url: string, data: any) {
+  /*   async function sendRequestWithRetry(url: string, data: any) {
     while (true) {
       try {
         const response = await axios.post(url, data, {
@@ -480,7 +480,7 @@ export default function CommonFormSection() {
         await wait(5000);
       }
     }
-  }
+  } */
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
