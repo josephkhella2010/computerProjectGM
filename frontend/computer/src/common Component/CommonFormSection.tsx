@@ -439,7 +439,7 @@ export default function CommonFormSection() {
         "https://computerprojectgm-backend-environment.onrender.com/api/send-email",
         newSms,
         {
-          timeout: 60000,
+          timeout: 120000,
         }
       );
       const sms = response.data.sms;
