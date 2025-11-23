@@ -21,6 +21,7 @@
   font-size: 36px;
   color: #ffffff;
   font-family: "Exo 2", sans-serif;
+  text-align: center;
 }
 
 .SendingEmailLowerContent {
@@ -56,5 +57,12 @@
   100% {
     opacity: 0;
     transform: translateX(50px);
+  }
+}
+@media (max-width: 550px) {
+  .SendingEmailUpperContent {
+    font-weight: 600;
+    font-size: 26px;
+    text-align: center;
   }
 }
