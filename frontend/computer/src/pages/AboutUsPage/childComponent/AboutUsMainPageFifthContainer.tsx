@@ -21,12 +21,12 @@ export default function AboutUsMainPageFifthContainer() {
             return <img src={item} alt="not found" key={ind} />;
           })}
       </div>
-      {/*     <div className={styles.aboutUsMainPageFifthContainerTextSection}>
+          <div className={styles.aboutUsMainPageFifthContainerTextSection}>
         {Arr &&
           Arr.map((item, ind) => {
             return <p key={ind}>{item}</p>;
           })}
-      </div> */}
+      </div> 
     </div>
   );
 }
