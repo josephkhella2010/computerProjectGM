@@ -4,7 +4,7 @@ import NavigationSection from "../Navigation/NavigationSection";
 import ContactUsPage from "../ContactUs/ContactUsPage";
 import Footer from "../footer/Footer";
 import RecyclePage from "../Recycle/RecyclePage";
-import AboutUsMainPage from "../AboutUsPage/AboutUsMainPage";
+/* import AboutUsMainPage from "../AboutUsPage/AboutUsMainPage";
 import WhatAcceptPage from "../aboutUs/What Accept/WhatAcceptPage";
 import DropOffPage from "../aboutUs/DropOff/DropOffPage";
 import DataDestructionPage from "../aboutUs/DataDestruction/DataDestructionPage";
@@ -14,7 +14,7 @@ import MedicalPage from "../Industry/MedicalPage/MedicalPage";
 import FinancePage from "../Industry/FinancePage/FinancePage";
 import ComputerRecyclePage from "../Services/ComputerRecyclePage/ComputerRecyclePage";
 import ServerRecyclePage from "../Services/ServerRecycle/ServerRecyclePage";
-import DataDestructionServicePage from "../Services/DataDestructionServicePage/DataDestructionServicePage";
+import DataDestructionServicePage from "../Services/DataDestructionServicePage/DataDestructionServicePage"; */
 import ScrollContainer from "../../common Component/ScrollContainer";
 
 function AppRoutes() {
@@ -25,10 +25,11 @@ function AppRoutes() {
       <Routes>
         <Route path="/" element={<HomeSection />} />
         <Route path="/contactUs" element={<ContactUsPage />} />
+        <Route path="/recycle" element={<RecyclePage />} />
+        {/* 
         <Route path="/aboutUs" element={<AboutUsMainPage />} />
         <Route path="/aboutUs" element={<AboutUsMainPage />} />
         <Route path="/what-we-accept" element={<WhatAcceptPage />} />
-        <Route path="/recycle" element={<RecyclePage />} />
         <Route path="/drop-off" element={<DropOffPage />} />
         <Route path="/data-destruction" element={<DataDestructionPage />} />
         <Route path="/government-page" element={<GovernmentPage />} />
@@ -45,7 +46,7 @@ function AppRoutes() {
         <Route
           path="/destruction-data-service-page"
           element={<DataDestructionServicePage />}
-        />
+        /> */}
       </Routes>
 
       <Footer />

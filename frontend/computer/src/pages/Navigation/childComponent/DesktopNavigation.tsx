@@ -1,4 +1,4 @@
-import { IoMdArrowDropdown } from "react-icons/io";
+//import { IoMdArrowDropdown } from "react-icons/io";
 import styles from "../Navigation.module.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -8,7 +8,7 @@ interface Props {
 }
 
 export default function DesktopNavigation({ isScroll }: Props) {
-  const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [_activeMenu, setActiveMenu] = useState<string | null>(null);
 
   return (
     <div className={styles.MainNavBar}>
@@ -18,17 +18,18 @@ export default function DesktopNavigation({ isScroll }: Props) {
         </Link>
 
         <ul>
-          {/* ABOUT US */}
           <div
             className={styles.menuContainerDesktop}
             onMouseEnter={() => setActiveMenu("about")}
             onMouseLeave={() => setActiveMenu(null)}
           >
+            {/*  
             <div className={styles.menuContainerDesktopLinkContainer}>
               <li>About</li>
               <IoMdArrowDropdown style={{ color: "#ffffff" }} />
             </div>
-            {activeMenu === "about" && (
+           
+          {activeMenu === "about" && (
               <div className={styles.subMenuDesktop}>
                 <Link
                   to="/aboutUs"
@@ -62,7 +63,7 @@ export default function DesktopNavigation({ isScroll }: Props) {
             )}
           </div>
 
-          {/* SERVICES */}
+         
           <div
             className={styles.menuContainerDesktop}
             onMouseEnter={() => setActiveMenu("services")}
@@ -104,7 +105,7 @@ export default function DesktopNavigation({ isScroll }: Props) {
             )}
           </div>
 
-          {/* INDUSTRIES */}
+          
           <div
             className={styles.menuContainerDesktop}
             onMouseEnter={() => setActiveMenu("industries")}
@@ -145,10 +146,9 @@ export default function DesktopNavigation({ isScroll }: Props) {
                   Finance
                 </Link>
               </div>
-            )}
+            )}*/}
           </div>
 
-          {/* CONTACT */}
           <li>
             <Link to="/contactUs">Contact Us</Link>
           </li>

@@ -28,10 +28,10 @@ const Arr: ArrType[] = [
 
 export default function HomePageSixthContainer() {
   const [isExpand, setIsExpand] = useState<boolean[]>(
-    Array(Arr.length).fill(false)
+    Array(Arr.length).fill(false),
   );
   const [maxHeights, setMaxHeights] = useState<number[]>(
-    Array(Arr.length).fill(0)
+    Array(Arr.length).fill(0),
   );
 
   const paraRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -79,7 +79,7 @@ export default function HomePageSixthContainer() {
       </div>
 
       <div className={styles.homePageSixthContainerTextSection}>
-        <p className={styles.homePageSixthContainerTextSectionMainPara}>
+        {/*   <p className={styles.homePageSixthContainerTextSectionMainPara}>
           Have questions about our electronic recycling process? Check out our
           frequently asked questions below for answers to common inquiries.
           Whether you're wondering about our environmental practices, data
@@ -87,7 +87,7 @@ export default function HomePageSixthContainer() {
           we've got you covered. If you can't find the information you're
           looking for, feel free to reach out to our friendly team for
           assistance.
-        </p>
+        </p> */}
 
         <div className={styles.faqContainer}>
           {Arr.map((item, ind) => {

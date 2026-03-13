@@ -81,12 +81,12 @@ export default function HomePageFourthContainer() {
                 styles.homepageFourthContainerInnerSectionThirdContentTextSection
               }
             >
-              <p>
+              {/*    <p>
                 Ready to make a difference? Join us in our mission to protect
                 the planet and preserve resources for future generations.
                 Whether you're a homeowner, business owner, or community
                 organizer, you can play a vital role in electronic recycling.
-              </p>
+              </p> */}
               <button
                 ref={btnRef}
                 onClick={() => handleNavigate()}

@@ -21,13 +21,13 @@ export default function HomePageFifthContainer() {
       <div className={styles.homePageFifthContainerTextSection}>
         <h3>Why Choose Us</h3>
         <h3>Why Choose GM Computer Recycle</h3>
-        <p>
+        {/*    <p>
           When considering electronic recycling partners, GM Computer Recycle
           stands out for our unwavering dedication to environmental
           sustainability and data security. With years of experience in the
           industry, we have honed our processes to ensure the highest standards
           of responsible recycling.
-        </p>
+        </p> */}
         <div className={styles.homePageFifthContainerTextSectionContent}>
           {Arr &&
             Arr.map((text, index) => {

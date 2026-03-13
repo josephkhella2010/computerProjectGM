@@ -6,11 +6,9 @@ export default function AboutUsMainPageUpperSection() {
       <h1>We Recycle Computers and Electronics</h1>
       <div className={styles.aboutUsMainPageUpperContainerMainSection}>
         <h2> About GM Computer Recycle</h2>
+
         <div className={styles.aboutUsMainPageUpperContainerSection}>
           <div className={styles.aboutUsMainPageUpperContainerSectionText}>
-            {/*  {Arr.map((item, ind) => {
-              return <p key={ind}>{item}</p>;
-            })} */}
             <p>
               Founded in 2018, GM Computer recycle is your trusted partner in
               responsible electronics recycling and high-quality refurbished
@@ -28,6 +26,7 @@ export default function AboutUsMainPageUpperSection() {
               protecting the future of our planet, one device at a time.
             </p>
           </div>
+
           <img src="/Foto/aboutUsRecycleTwo.jpg" alt="" />
         </div>
       </div>

@@ -2,7 +2,7 @@ import styles from "../AboutUsMainPage.module.css";
 export default function AboutUsMainPageFourthContainer() {
   return (
     <div className={styles.aboutUsMainPageFourthContainer}>
-      <h1>Innovation and Improvement</h1>
+      {/*      <h1>Innovation and Improvement</h1>
       <p>
         One area that separates GM Computer Recycle from the pack is our
         commitment to constant innovation and workplace improvement. First of
@@ -11,11 +11,11 @@ export default function AboutUsMainPageFourthContainer() {
         of this, we do everything we can to maintain an injury-free workplace.
         In addition to workplace safety, we all work to minimize pollution and
         maximize our customer’s peace of mind.
-      </p>
+      </p> */}
       <div className={styles.aboutUsMainPageFourthContainerLowerSection}>
         <img src="/Foto/aboutUsThree.jpg" alt="aboutUsThree" />
         <div className={styles.aboutUsMainPageFourthContainerLowerSectionText}>
-          <p>
+          {/*           <p>
             We are committed to constantly growing, moving forward, and
             improving every aspect of our promise. Quality of service and
             convenience are a driving force of our work. In addition to that,
@@ -30,7 +30,7 @@ export default function AboutUsMainPageFourthContainer() {
             small for our team’s attention. We are committed to earn your trust
             as the source for friendly, secure, and convenient computer
             electronics recycling.
-          </p>
+          </p> */}
         </div>
       </div>
     </div>

@@ -37,7 +37,7 @@ export default function HomePageFirstContainer() {
           </div>
         </div>
         <div className={styles.HomePageFirstContainerLowerContent}>
-          <p>
+          {/*     <p>
             "Revolutionizing IT Recycling for a Greener World" captures the
             essence of GMComputerRecycle's mission to transform electronic waste
             management. By emphasizing the concept of revolutionizing, it
@@ -47,7 +47,7 @@ export default function HomePageFirstContainer() {
             of their efforts. Together, these words convey Precision E-Cycle's
             commitment to sustainability and the global significance of their
             work.
-          </p>
+          </p> */}
         </div>
         <div className={styles.firstHomePageOverlay}></div>
       </div>

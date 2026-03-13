@@ -13,7 +13,7 @@ export default function HomePageThirdContainer() {
         </div>
       </div>
       <div className={styles.homePageThirdContainerRightSection}>
-        <h3> ABOUT US</h3>
+        {/* <h3> ABOUT US</h3>
         <h2> ABOUT gm computer recycle</h2>
         <p>
           In the heart of our mission at GM Computer Recycle lies a fervent
@@ -36,6 +36,7 @@ export default function HomePageThirdContainer() {
           disposal, we are dedicated to making a positive difference at every
           level.
         </p>
+        */}
       </div>
     </div>
   );

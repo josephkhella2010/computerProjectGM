@@ -2,14 +2,14 @@ import { useEffect, useRef, useState } from "react";
 import styles from "../Navigation.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { BiArrowBack } from "react-icons/bi";
-import { IoMdArrowDropdown } from "react-icons/io";
+//import { IoMdArrowDropdown } from "react-icons/io";
 
 interface Props {
   isScroll: boolean;
   setIsScroll: (isScroll: boolean) => void;
 }
 
-const menuArr = [
+/* const menuArr = [
   {
     mainLink: "About",
     subMenuLink: [
@@ -39,17 +39,17 @@ const menuArr = [
       { name: "Finance", path: "/finance-page" },
     ],
   },
-];
+]; */
 
 export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
   const [showMenu, setShowMenu] = useState<boolean>(false);
-  const [showSubMenu, setShowSubMenu] = useState<boolean[]>(
+  /*   const [showSubMenu, setShowSubMenu] = useState<boolean[]>(
     Array(menuArr.length).fill(false)
   );
   const [containerHeights, setContainerHeights] = useState<number[]>(
     Array(menuArr.length).fill(0)
-  );
-  const subMenuRef = useRef<Array<HTMLDivElement | null>>([]);
+  ); */
+  // const subMenuRef = useRef<Array<HTMLDivElement | null>>([]);
   const sideBarRef = useRef<HTMLDivElement>(null);
 
   const addClassActive = showMenu ? styles.active : "";
@@ -68,7 +68,7 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
     };
   }, [showMenu, setIsScroll]);
 
-  useEffect(() => {
+  /*   useEffect(() => {
     const handleResize = () => {
       const heights = subMenuRef.current.map(
         (el) =>
@@ -92,7 +92,7 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
   };
   const closeSubMenu = () => {
     setShowSubMenu(Array(menuArr.length).fill(false));
-  };
+  }; */
 
   const adjustSidebarHeight = () => {
     if (!sideBarRef.current) return;
@@ -111,11 +111,11 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
 
   const closeMenu = () => {
     setShowMenu(false);
-    setShowSubMenu(Array(menuArr.length).fill(false));
+    /*   setShowSubMenu(Array(menuArr.length).fill(false));
     if (sideBarRef.current) {
       sideBarRef.current.style.height = "auto";
       sideBarRef.current.style.overflowY = "hidden";
-    }
+    } */
     document.body.style.overflow = "auto";
   };
 
@@ -123,7 +123,7 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
     if (showMenu) {
       adjustSidebarHeight();
     }
-  }, [showMenu, showSubMenu]);
+  }, [showMenu]);
 
   useEffect(() => {
     window.addEventListener("resize", adjustSidebarHeight);
@@ -172,7 +172,7 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
                     className={styles.subMenuMobileMainContainerSectionContent}
                   >
                     <div className={styles.mobileMainSubmenuConatainer}>
-                      {menuArr.map((item, index) => (
+                      {/*                   {menuArr.map((item, index) => (
                         <div
                           className={styles.mobileMainSubmenuSection}
                           key={index}
@@ -216,7 +216,7 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
                                     to={it.path}
                                     className={styles.subMenuMobileLink}
                                     onClick={() => {
-                                      setShowMenu(false), closeSubMenu();
+                                      (setShowMenu(false), closeSubMenu());
                                     }}
                                   >
                                     {it.name}
@@ -226,7 +226,7 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
                             </ul>
                           </div>
                         </div>
-                      ))}
+                      ))} */}
                       <li
                         onClick={() => setShowMenu(false)}
                         className={styles.linksContainer}
