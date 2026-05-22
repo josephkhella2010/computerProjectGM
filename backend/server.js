@@ -12,8 +12,10 @@ app.get("/test", (req, res) => res.send("Server is running!"));
 */
 app.use("/api/send-email", require("./ApiRoutes/sendEmail"));
 
-app.listen(process.env.PORT, () =>
+const PORT = process.env.PORT || 3100;
+
+app.listen(PORT, () =>
   console.log(
-    `🚀 Server running on http://localhost:${process.env.PORT || 3100}`
-  )
+    `🚀 Server running on http://localhost:${process.env.PORT || 3100}`,
+  ),
 );
