@@ -498,7 +498,7 @@ export default function CommonFormSection() {
 
       const response = await axios.post(
         "https://computerprojectgm-backend-environment.onrender.com/api/send-email",
-        newSms
+        newSms,
       );
 
       toast.success(response.data.sms);
@@ -517,6 +517,7 @@ export default function CommonFormSection() {
       });
     } catch (error) {
       toast.error("Something went wrong.");
+      console.log(error);
     } finally {
       dispatch(setIsSending(false));
     }
