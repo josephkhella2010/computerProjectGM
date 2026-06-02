@@ -8,7 +8,7 @@ interface Props {
 }
 
 export default function DesktopNavigation({ isScroll }: Props) {
-  const [_activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [, setActiveMenu] = useState<string | null>(null);
 
   return (
     <div className={styles.MainNavBar}>

@@ -90,6 +90,22 @@ const express = require("express");
 const router = express.Router();
 const SibApiV3Sdk = require("sib-api-v3-sdk");
 
+///////////////////////////
+const DateNow = () => {
+  const date = new Date();
+
+  const day = String(date.getDate()).padStart(2, "0");
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const year = date.getFullYear();
+
+  const hour = String(date.getHours()).padStart(2, "0");
+  const minute = String(date.getMinutes()).padStart(2, "0");
+  const second = String(date.getSeconds()).padStart(2, "0");
+
+  return `${day}-${month}-${year} ${hour}:${minute}:${second}`;
+};
+///////////////////////////
+
 // Load Brevo API key
 SibApiV3Sdk.ApiClient.instance.authentications["api-key"].apiKey =
   process.env.BREVO_API_KEY;
@@ -108,6 +124,7 @@ router.post("/", async (req, res) => {
     amount,
     message,
     type,
+
   } = req.body;
 
   if (
@@ -141,6 +158,7 @@ router.post("/", async (req, res) => {
 
       Message:
       ${message}
+      Date: ${new Date().toLocaleString()}
     `;
 
     await brevo.sendTransacEmail({
