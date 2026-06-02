@@ -89,10 +89,15 @@ module.exports = router;
 const express = require("express");
 const router = express.Router();
 const SibApiV3Sdk = require("sib-api-v3-sdk");
-///////////////////////////
 
-///////////////////////////
-const DateNow = () => {
+// Brevo Configuration
+const defaultClient = SibApiV3Sdk.ApiClient.instance;
+defaultClient.authentications["api-key"].apiKey = process.env.BREVO_API_KEY;
+
+const brevo = new SibApiV3Sdk.TransactionalEmailsApi();
+
+// Date Helper
+const getCurrentDate = () => {
   const date = new Date();
 
   const day = String(date.getDate()).padStart(2, "0");
@@ -105,12 +110,133 @@ const DateNow = () => {
 
   return `${day}-${month}-${year} ${hour}:${minute}:${second}`;
 };
-///////////////////////////
 
-// Load Brevo API key
-SibApiV3Sdk.ApiClient.instance.authentications["api-key"].apiKey =
-  process.env.BREVO_API_KEY;
+router.post("/", async (req, res) => {
+  try {
+    const {
+      firstname,
+      lastname,
+      email,
+      phone,
+      street,
+      city,
+      zipcode,
+      amount,
+      message,
+      type,
+    } = req.body;
 
-const brevo = new SibApiV3Sdk.TransactionalEmailsApi();
- 
+    // Validation
+    if (
+      !firstname?.trim() ||
+      !lastname?.trim() ||
+      !email?.trim() ||
+      !phone?.trim() ||
+      !street?.trim() ||
+      !city?.trim() ||
+      !zipcode?.trim() ||
+      !String(amount)?.trim() ||
+      !String(type)?.trim()
+    ) {
+      return res.status(400).json({
+        success: false,
+        message: "Please fill all required fields",
+      });
+    }
+
+    const currentDate = getCurrentDate();
+
+    const emailText = `
+New Website Submission
+
+Date: ${currentDate}
+
+Name: ${firstname} ${lastname}
+Email: ${email}
+Phone: ${phone}
+
+Address:
+${street}
+${city}
+${zipcode}
+
+Amount: ${amount}
+Type: ${type}
+
+Message:
+${message || "No message provided"}
+`;
+
+    console.log(emailText); // Debug
+
+    const sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
+
+    sendSmtpEmail.sender = {
+      name: "GM Computer Recycle",
+      email: process.env.BREVO_SENDER_EMAIL,
+    };
+
+    sendSmtpEmail.to = [
+      {
+        email: process.env.RECEIVER_EMAIL,
+        name: "Admin",
+      },
+    ];
+
+    sendSmtpEmail.replyTo = {
+      email,
+      name: `${firstname} ${lastname}`,
+    };
+
+    sendSmtpEmail.subject = `New ${type} Request - ${firstname} ${lastname}`;
+
+    sendSmtpEmail.textContent = emailText;
+
+    sendSmtpEmail.htmlContent = `
+      <h2>New Website Submission</h2>
+
+      <p><strong>Date:</strong> ${currentDate}</p>
+
+      <hr>
+
+      <h3>Customer Information</h3>
+
+      <p><strong>Name:</strong> ${firstname} ${lastname}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Phone:</strong> ${phone}</p>
+
+      <h3>Address</h3>
+
+      <p>${street}</p>
+      <p>${city}</p>
+      <p>${zipcode}</p>
+
+      <h3>Request Details</h3>
+
+      <p><strong>Amount:</strong> ${amount}</p>
+      <p><strong>Type:</strong> ${type}</p>
+
+      <h3>Message</h3>
+
+      <p>${message || "No message provided"}</p>
+    `;
+
+    const result = await brevo.sendTransacEmail(sendSmtpEmail);
+
+    return res.status(200).json({
+      success: true,
+      message: "Email sent successfully",
+      messageId: result.messageId,
+    });
+  } catch (error) {
+    console.error("Brevo Error:", error);
+
+    return res.status(500).json({
+      success: false,
+      message: "Failed to send email",
+      error: error.message,
+    });
+  }
+});
+
 module.exports = router;
