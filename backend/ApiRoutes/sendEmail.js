@@ -110,7 +110,7 @@ const getCurrentDate = () => {
   const minute = String(date.getMinutes()).padStart(2, "0");
   const second = String(date.getSeconds()).padStart(2, "0");
 
-  return `${day}-${month}-${year} ${hour}:${minute}:${second}`;
+  return `Date: ${day}-${month}-${year} Time: ${hour}:${minute}:${second}`;
 };
 
 router.post("/", async (req, res) => {
@@ -145,9 +145,6 @@ router.post("/", async (req, res) => {
         message: "Please fill all required fields",
       });
     }
-
-    console.log("BREVO_API_KEY:", !!process.env.BREVO_API_KEY);
-    console.log("USER_EMAIL:", process.env.USER_EMAIL);
 
     const currentDate = getCurrentDate();
 
@@ -188,8 +185,8 @@ router.post("/", async (req, res) => {
 
       <h3>Address</h3>
       <p>${street}</p>
-      <p>${city}</p>
-      <p>${zipcode}</p>
+      <p><strong>City:</strong> ${city}</p>
+      <p><strong>Zip Code:</strong> ${zipcode}</p>
 
       <h3>Request Details</h3>
       <p><strong>Amount:</strong> ${amount}</p>
@@ -199,11 +196,9 @@ router.post("/", async (req, res) => {
       <p>${message || "No message provided"}</p>
     `;
 
-    console.log("Sending email...");
 
     const result = await brevo.sendTransacEmail(sendSmtpEmail);
 
-    console.log("Brevo Success:", result);
 
     return res.status(200).json({
       success: true,

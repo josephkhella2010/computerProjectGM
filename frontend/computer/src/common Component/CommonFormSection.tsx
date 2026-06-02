@@ -501,7 +501,7 @@ export default function CommonFormSection() {
         newSms,
       );
 
-      toast.success(response.data.sms);
+      toast.success(response.data.message);
 
       setFormInfo({
         firstname: "",
