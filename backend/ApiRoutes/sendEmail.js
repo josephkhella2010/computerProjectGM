@@ -97,6 +97,8 @@ defaultClient.authentications["api-key"].apiKey = process.env.BREVO_API_KEY;
 const brevo = new SibApiV3Sdk.TransactionalEmailsApi();
 
 // Date Helper
+
+// Date Helper
 const getCurrentDate = () => {
   const date = new Date();
 
@@ -144,97 +146,83 @@ router.post("/", async (req, res) => {
       });
     }
 
+    console.log("BREVO_API_KEY:", !!process.env.BREVO_API_KEY);
+    console.log("USER_EMAIL:", process.env.USER_EMAIL);
+
     const currentDate = getCurrentDate();
-
-    const emailText = `
-New Website Submission
-
-Date: ${currentDate}
-
-Name: ${firstname} ${lastname}
-Email: ${email}
-Phone: ${phone}
-
-Address:
-${street}
-${city}
-${zipcode}
-
-Amount: ${amount}
-Type: ${type}
-
-Message:
-${message || "No message provided"}
-`;
-
-    console.log(emailText); // Debug
 
     const sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
 
+    // Sender (must be verified in Brevo)
     sendSmtpEmail.sender = {
       name: "GM Computer Recycle",
-      email: process.env.BREVO_SENDER_EMAIL,
+      email: process.env.USER_EMAIL,
     };
 
+    // Receiver
     sendSmtpEmail.to = [
       {
-        email: process.env.RECEIVER_EMAIL,
+        email: process.env.USER_EMAIL,
         name: "Admin",
       },
     ];
 
+    // Customer email for reply
     sendSmtpEmail.replyTo = {
-      email,
+      email: email,
       name: `${firstname} ${lastname}`,
     };
 
-    sendSmtpEmail.subject = `New ${type} Request - ${firstname} ${lastname}`;
-
-    sendSmtpEmail.textContent = emailText;
+    sendSmtpEmail.subject = `New ${type} Request`;
 
     sendSmtpEmail.htmlContent = `
-      <h2>New Website Submission</h2>
+      <h2>New Website Request</h2>
 
       <p><strong>Date:</strong> ${currentDate}</p>
 
       <hr>
-
-      <h3>Customer Information</h3>
 
       <p><strong>Name:</strong> ${firstname} ${lastname}</p>
       <p><strong>Email:</strong> ${email}</p>
       <p><strong>Phone:</strong> ${phone}</p>
 
       <h3>Address</h3>
-
       <p>${street}</p>
       <p>${city}</p>
       <p>${zipcode}</p>
 
       <h3>Request Details</h3>
-
       <p><strong>Amount:</strong> ${amount}</p>
       <p><strong>Type:</strong> ${type}</p>
 
       <h3>Message</h3>
-
       <p>${message || "No message provided"}</p>
     `;
 
+    console.log("Sending email...");
+
     const result = await brevo.sendTransacEmail(sendSmtpEmail);
+
+    console.log("Brevo Success:", result);
 
     return res.status(200).json({
       success: true,
       message: "Email sent successfully",
-      messageId: result.messageId,
+      data: result,
     });
   } catch (error) {
-    console.error("Brevo Error:", error);
+    console.error("========== BREVO ERROR ==========");
+    console.error(error);
+
+    if (error.response) {
+      console.error("STATUS:", error.response.statusCode);
+      console.error("BODY:", error.response.body);
+    }
 
     return res.status(500).json({
       success: false,
-      message: "Failed to send email",
-      error: error.message,
+      message: error.message,
+      brevoError: error.response?.body || null,
     });
   }
 });
