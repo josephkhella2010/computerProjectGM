@@ -1,6 +1,6 @@
 import styles from "./home.module.css";
 import { useNavigate } from "react-router-dom";
-import type { imgArrType } from "../../helps/interfaces";
+import type { imgArrType } from "../../../helps/interfaces";
 export default function HomeSectionUpperSection() {
   const imgArr: imgArrType[] = [
     {

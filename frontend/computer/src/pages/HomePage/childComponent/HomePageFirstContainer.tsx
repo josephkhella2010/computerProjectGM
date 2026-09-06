@@ -2,6 +2,7 @@ import { FaRecycle } from "react-icons/fa";
 import styles from "./home.module.css";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
+import LetterAnimation from "./LetterAnimation";
 
 export default function HomePageFirstContainer() {
   const navigate = useNavigate();
@@ -21,19 +22,22 @@ export default function HomePageFirstContainer() {
     <div className={styles.HomePageFirstContainerMainSection}>
       <div className={styles.HomePageFirstContainerSection}>
         <div className={styles.HomePageFirstContainerContent}>
-          <h1>Our world needs your care.</h1>
-          <h3>Revolutionizing IT Recycling for a Greener World.</h3>
-          <div className={styles.recycleBtn}>
-            <button
-              ref={btnRef}
-              onClick={handleRecycle}
-              onMouseEnter={handleMouseRecycle}
-              onKeyDown={handleKeyRecycle}
-            >
-              {" "}
-              <FaRecycle />
-              Recycle Now
-            </button>
+          <LetterAnimation />
+          <div className={styles.HomePageFirstContainerContentTwo}>
+            <h1>Our world needs your care.</h1>
+            <h3>Revolutionizing IT Recycling for a Greener World.</h3>
+            <div className={styles.recycleBtn}>
+              <button
+                ref={btnRef}
+                onClick={handleRecycle}
+                onMouseEnter={handleMouseRecycle}
+                onKeyDown={handleKeyRecycle}
+              >
+                {" "}
+                <FaRecycle />
+                Recycle Now
+              </button>
+            </div>
           </div>
         </div>
         <div className={styles.HomePageFirstContainerLowerContent}>

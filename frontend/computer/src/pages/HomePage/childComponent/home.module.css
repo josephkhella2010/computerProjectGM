@@ -8,6 +8,12 @@
   width: 100%;
   min-height: 100dvh;
 }
+.HomePageFirstContainerContentMain {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 /* .HomePageUpperSection{
     background-color:#d9b9b9;
     display:flex;
@@ -67,8 +73,8 @@
 } */
 .HomePageFirstContainerMainSection {
   padding: 0px 0px 0px 0px;
-  background-color: #d9b9b9;
-  height: 750px;
+
+  min-height: 750px;
 }
 .HomePageFirstContainerSection {
   background-image: url("/Foto/homePhoto/firstContainerPage.jpg");
@@ -77,7 +83,7 @@
   background-size: cover;
   height: 100%;
   position: relative;
-  display: flex;
+
   gap: 30px;
   align-items: center;
 }
@@ -103,6 +109,12 @@
   gap: 30px;
   width: 60%;
   padding: 30px;
+  width: 100%;
+}
+.HomePageFirstContainerContentTwo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .HomePageFirstContainerContent h1 {
@@ -622,16 +634,28 @@
     text-shadow: 0 0 0 #4f93ff;
   }
   30% {
-    text-shadow: 0 0 5px #4f93ff, 0 0 10px #4f93ff, 0 0 15px #4f93ff,
-      0 0 20px #4f93ff, 0 0 30px #4f93ff;
+    text-shadow:
+      0 0 5px #4f93ff,
+      0 0 10px #4f93ff,
+      0 0 15px #4f93ff,
+      0 0 20px #4f93ff,
+      0 0 30px #4f93ff;
   }
   50% {
-    text-shadow: 0 0 5px #4f93ff, 0 0 10px #4f93ff, 0 0 15px #4f93ff,
-      0 0 20px #4f93ff, 0 0 30px #4f93ff;
+    text-shadow:
+      0 0 5px #4f93ff,
+      0 0 10px #4f93ff,
+      0 0 15px #4f93ff,
+      0 0 20px #4f93ff,
+      0 0 30px #4f93ff;
   }
   80% {
-    text-shadow: 0 0 5px #4f93ff, 0 0 10px #4f93ff, 0 0 15px #4f93ff,
-      0 0 20px #4f93ff, 0 0 30px #4f93ff;
+    text-shadow:
+      0 0 5px #4f93ff,
+      0 0 10px #4f93ff,
+      0 0 15px #4f93ff,
+      0 0 20px #4f93ff,
+      0 0 30px #4f93ff;
   }
   100% {
     text-shadow: 0 0 0 #4f93ff;
@@ -696,8 +720,8 @@
     font-size: 30px;
   }
   .HomePageSecondContainerMainSectionContentsubContent p {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
+    font-family:
+      "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     max-width: 90%;
     font-size: 24px;
   }
