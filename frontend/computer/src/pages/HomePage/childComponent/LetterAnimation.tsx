@@ -148,7 +148,7 @@ export default function GMComputerAnimation() {
 
   const word = "GM Computer Recycle";
 
-  const [currentIndex, setCurrentIndex] = useState<number>(-1);
+  const [_, setCurrentIndex] = useState<number>(-1);
 
   const [startAnimation, setStartAnimation] = useState<boolean>(false);
 
