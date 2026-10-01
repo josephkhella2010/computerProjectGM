@@ -8,6 +8,8 @@ import HomePageSixthContainer from "./childComponent/HomePageSixthContainer";
 import HomePageThirdContainer from "./childComponent/HomePageThirdContainer";
 import HomePageTrackContainer from "./childComponent/HomePageTrackContainer";
 import RevealParent from "./childComponent/RevealParent";
+import TrackFoto from "./childComponent/TrackFoto";
+import TrackParent from "./childComponent/TrackParent";
 
 export default function HomeSection() {
   return (
@@ -16,6 +18,18 @@ export default function HomeSection() {
         <RevealParent direction="top">
           <HomePageFirstContainer />
         </RevealParent>
+        {/*  track foto section */}
+        <div className={styles.trackFotoMainContainer}>
+          <TrackParent direction="left">
+            <TrackFoto />
+          </TrackParent>
+
+          <TrackParent direction="right">
+            <TrackFoto />
+          </TrackParent>
+        </div>
+
+        {/*  track foto section */}
 
         <RevealParent direction="left">
           <HomePageSecondContainer />

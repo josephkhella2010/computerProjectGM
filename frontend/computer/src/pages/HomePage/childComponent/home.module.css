@@ -835,3 +835,205 @@
     width: 100%;
   }
 }
+.trackFotoMainContainer {
+  width: 100%;
+  overflow: hidden;
+  padding: 50px 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/* =========================================================
+   TRACK MAIN
+========================================================= */
+
+.trackFotoMainContainer {
+  width: 100%;
+  overflow: hidden;
+
+  padding: 50px 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* =========================================================
+   VIEWPORT
+========================================================= */
+
+.trackParent {
+  width: 100%;
+  overflow: hidden;
+
+  position: relative;
+}
+
+/* =========================================================
+   MOVING TRACK
+========================================================= */
+
+.trackSection {
+  --carousel-distance: 0px;
+
+  display: flex;
+  width: max-content;
+
+  flex-shrink: 0;
+
+  will-change: transform;
+
+  transform: translate3d(0, 0, 0);
+}
+
+/* =========================================================
+   ONE COMPLETE GROUP
+========================================================= */
+
+.trackGroup {
+  display: flex;
+
+  flex-shrink: 0;
+
+  gap: 10px;
+
+  padding-right: 10px;
+}
+
+/* =========================================================
+   IMAGE ITEM
+========================================================= */
+
+.trackFotoContainer {
+  flex: 0 0 auto;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+}
+
+.trackFotoContainerImg {
+  display: block;
+
+  width: 250px;
+  height: 500px;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+   LEFT
+========================================================= */
+
+.trackLeft .trackSection {
+  animation: carouselLeft 30s linear infinite;
+}
+
+/* =========================================================
+   RIGHT
+========================================================= */
+
+.trackRight .trackSection {
+  animation: carouselRight 30s linear infinite;
+}
+
+/* =========================================================
+   LEFT ANIMATION
+========================================================= */
+
+@keyframes carouselLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(calc(-1 * var(--carousel-distance)), 0, 0);
+  }
+}
+
+/* =========================================================
+   RIGHT ANIMATION
+========================================================= */
+
+@keyframes carouselRight {
+  from {
+    transform: translate3d(calc(-1 * var(--carousel-distance)), 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* =========================================================
+   HOVER PAUSE
+========================================================= */
+
+/* .trackParent:hover .trackSection {
+  animation-play-state: paused;
+} */
+
+/* =========================================================
+   REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .trackLeft .trackSection,
+  .trackRight .trackSection {
+    animation: none;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+  .trackFotoMainContainer {
+    padding: 30px 10px;
+    gap: 15px;
+  }
+
+  .trackFotoContainerImg {
+    width: 180px;
+    height: 360px;
+  }
+
+  .trackGroup {
+    gap: 8px;
+    padding-right: 8px;
+  }
+
+  .trackLeft .trackSection,
+  .trackRight .trackSection {
+    animation-duration: 25s;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .trackFotoMainContainer {
+    padding: 20px 5px;
+    gap: 12px;
+  }
+
+  .trackFotoContainerImg {
+    width: 140px;
+    height: 280px;
+  }
+
+  .trackGroup {
+    gap: 6px;
+    padding-right: 6px;
+  }
+
+  .trackLeft .trackSection,
+  .trackRight .trackSection {
+    animation-duration: 20s;
+  }
+}
