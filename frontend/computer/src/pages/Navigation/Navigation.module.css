@@ -477,3 +477,18 @@
     width: 100%;
   }
 }
+
+.logo {
+  width: 50px;
+  height: 35px;
+}
+.logoContainer {
+  width: 70px;
+  height: 50px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 50%;
+}

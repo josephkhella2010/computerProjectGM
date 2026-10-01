@@ -138,7 +138,15 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
       <div
         className={`${styles.mobileNavBar} ${isScroll ? styles.scrolled : ""}`}
       >
-        <img src="/logo.svg" alt="not Found" onClick={() => navigate("/")} />
+        <div className={styles.logoContainer}>
+          <img
+            src="/Foto/homePageOne.png"
+            className={styles.logo}
+            alt="not Found"
+            onClick={() => navigate("/")}
+          />
+        </div>
+
         <div
           className={`${styles.hamMenu} ${addClassActive}`}
           onClick={() => setShowMenu(!showMenu)}

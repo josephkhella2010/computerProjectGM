@@ -15,7 +15,13 @@ export default function DesktopNavigation({ isScroll }: Props) {
     <div className={styles.MainNavBar}>
       <div className={`${styles.navBar} ${isScroll ? styles.scrolled : ""}`}>
         <Link to="/">
-          <img src="/logo.svg" alt="Logo" />
+          <div className={styles.logoContainer}>
+            <img
+              src="/Foto/homePageOne.png"
+              alt="Logo"
+              className={styles.logo}
+            />
+          </div>
         </Link>
 
         <ul>
