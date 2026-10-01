@@ -73,19 +73,17 @@
 } */
 .HomePageFirstContainerMainSection {
   padding: 0px 0px 0px 0px;
-
-  min-height: 750px;
 }
 .HomePageFirstContainerSection {
-  background-image: url("/Foto/homePhoto/firstContainerPage.jpg");
+  background-image: url("/Foto/homePageOne.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  height: 100%;
+  background-size: contain;
+  height: auto;
+  width: 100%;
   position: relative;
-
-  gap: 30px;
   align-items: center;
+  gap: 30px;
 }
 .firstHomePageOverlay {
   position: absolute;
@@ -94,8 +92,10 @@
   height: 100%;
   background-image: linear-gradient(
     122deg,
-    rgba(137, 2, 2, 0.708) 53%,
-    #f2295b00 81%
+    rgba(137, 2, 2, 0.677) 0%,
+    rgba(137, 2, 2, 0.651) 45%,
+    rgba(137, 2, 2, 0.78) 70%,
+    rgba(80, 0, 0, 0.67) 100%
   );
   background-color: transparent;
   z-index: 2;
@@ -107,9 +107,10 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  width: 60%;
+  width: 100%;
   padding: 30px;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.286);
 }
 .HomePageFirstContainerContentTwo {
   display: flex;
