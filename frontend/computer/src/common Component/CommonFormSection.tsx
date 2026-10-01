@@ -527,10 +527,10 @@ export default function CommonFormSection() {
     let name = "";
     switch (location.pathname) {
       case "/recycle":
-        name = "See If You Qualify For Free Pickup";
+        name = "Request a Free Bulk Electronics Pickup";
         break;
       case "/data-destruction":
-        name = "See If You Qualify For Free Data Destruction";
+        name = "Request Data Destruction Service";
         break;
       default:
         name = "";

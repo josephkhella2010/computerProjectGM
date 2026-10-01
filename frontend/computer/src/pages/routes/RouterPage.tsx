@@ -4,10 +4,12 @@ import NavigationSection from "../Navigation/NavigationSection";
 import ContactUsPage from "../ContactUs/ContactUsPage";
 import Footer from "../footer/Footer";
 import RecyclePage from "../Recycle/RecyclePage";
-/* import AboutUsMainPage from "../AboutUsPage/AboutUsMainPage";
+import AboutUsMainPage from "../AboutUsPage/AboutUsMainPage";
 import WhatAcceptPage from "../aboutUs/What Accept/WhatAcceptPage";
+
 import DropOffPage from "../aboutUs/DropOff/DropOffPage";
 import DataDestructionPage from "../aboutUs/DataDestruction/DataDestructionPage";
+/*
 import GovernmentPage from "../Industry/GovernmentPage/GovernmentPage";
 import EducationPage from "../Industry/EducationPage/EducationPage";
 import MedicalPage from "../Industry/MedicalPage/MedicalPage";
@@ -26,12 +28,14 @@ function AppRoutes() {
         <Route path="/" element={<HomeSection />} />
         <Route path="/contactUs" element={<ContactUsPage />} />
         <Route path="/recycle" element={<RecyclePage />} />
-        {/* 
+
         <Route path="/aboutUs" element={<AboutUsMainPage />} />
         <Route path="/aboutUs" element={<AboutUsMainPage />} />
+       
         <Route path="/what-we-accept" element={<WhatAcceptPage />} />
         <Route path="/drop-off" element={<DropOffPage />} />
         <Route path="/data-destruction" element={<DataDestructionPage />} />
+         {/* 
         <Route path="/government-page" element={<GovernmentPage />} />
         <Route path="/education-page" element={<EducationPage />} />
         <Route path="/medical-page" element={<MedicalPage />} />

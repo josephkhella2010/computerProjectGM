@@ -15,16 +15,19 @@ export default function DataDestructionPage() {
           <div className={styles.DataDestructionPageSecondSectionLeftContent}>
             <h1>Secure Data Destruction</h1>
             <p>
-              Secure data destruction is paramount in today's digital landscape,
-              where safeguarding sensitive information is a top priority. Our
-              comprehensive data destruction services ensure the complete and
-              irreversible removal of data from electronic devices, protecting
-              your privacy and confidentiality. Using industry-leading
-              techniques and protocols, we guarantee that no traces of your data
-              remain, mitigating the risk of unauthorized access or data
-              breaches. With our secure data destruction solutions, you can
-              trust that your information is handled with the highest level of
-              care and attention to detail.
+              Protecting sensitive information is an essential part of
+              responsible IT asset disposition. GM Computer LLC provides secure
+              data sanitization and destruction services for computers, hard
+              drives, SSDs, and other data-bearing devices. Our data
+              sanitization procedures are aligned with NIST SP 800-88 guidelines
+              and are designed to securely remove data from eligible media
+              before equipment is reused, remarketed, or recycled. When
+              data-bearing media cannot be securely sanitized, physical
+              destruction options are available. We provide documented
+              processing, asset and serial number tracking, and Certificates of
+              Data Destruction when applicable, helping businesses, schools,
+              government agencies, and other organizations maintain a clear
+              chain of custody for their retired IT assets.
             </p>
             <p>
               Whether you're a business, government agency, or individual
@@ -46,23 +49,14 @@ export default function DataDestructionPage() {
           <div className={styles.DataDestructionPageThirdSectionRightContent}>
             <h1>Secure Hard Drive Destruction</h1>
             <p>
-              "Drive destruction" encapsulates our commitment to ensuring the
-              complete and secure disposal of your hard drives. If you prefer
-              witnessing the destruction process firsthand, simply call us to
-              schedule an appointment. Alternatively, our associates can place
-              your hard drive in our secure drop box for batch destruction,
-              guaranteeing the confidentiality and security of your data. Rest
-              assured, all data destruction is backed by our guarantee, and we
-              take immense pride in maintaining the highest standards of
-              security throughout the process.
-            </p>
-            <p>
-              Additionally, if your hard drive holds reuse value, we offer the
-              option to wipe it clean free of charge. This ensures that it can
-              be refurbished and repurposed for use in another computer,
-              promoting sustainability while safeguarding your data privacy.
-              Trust us to handle your hard drive destruction needs with
-              professionalism, confidentiality, and security.
+              GM Computer LLC provides secure physical destruction options for
+              hard drives and other data-bearing media that cannot be reused or
+              securely sanitized. Each project can be documented with asset and
+              serial number tracking, chain-of-custody records, and a
+              Certificate of Data Destruction when applicable. Our goal is to
+              provide businesses, schools, government agencies, and other
+              organizations with a secure and documented process from collection
+              through final disposition.
             </p>
           </div>
         </div>

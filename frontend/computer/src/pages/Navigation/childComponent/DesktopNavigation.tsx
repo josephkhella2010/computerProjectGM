@@ -2,13 +2,14 @@
 import styles from "../Navigation.module.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 interface Props {
   isScroll: boolean;
 }
 
 export default function DesktopNavigation({ isScroll }: Props) {
-  const [, setActiveMenu] = useState<string | null>(null);
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
 
   return (
     <div className={styles.MainNavBar}>
@@ -23,13 +24,12 @@ export default function DesktopNavigation({ isScroll }: Props) {
             onMouseEnter={() => setActiveMenu("about")}
             onMouseLeave={() => setActiveMenu(null)}
           >
-            {/*  
             <div className={styles.menuContainerDesktopLinkContainer}>
               <li>About</li>
               <IoMdArrowDropdown style={{ color: "#ffffff" }} />
             </div>
-           
-          {activeMenu === "about" && (
+
+            {activeMenu === "about" && (
               <div className={styles.subMenuDesktop}>
                 <Link
                   to="/aboutUs"
@@ -62,8 +62,8 @@ export default function DesktopNavigation({ isScroll }: Props) {
               </div>
             )}
           </div>
+          {/*  
 
-         
           <div
             className={styles.menuContainerDesktop}
             onMouseEnter={() => setActiveMenu("services")}
@@ -105,7 +105,6 @@ export default function DesktopNavigation({ isScroll }: Props) {
             )}
           </div>
 
-          
           <div
             className={styles.menuContainerDesktop}
             onMouseEnter={() => setActiveMenu("industries")}
@@ -146,9 +145,9 @@ export default function DesktopNavigation({ isScroll }: Props) {
                   Finance
                 </Link>
               </div>
-            )}*/}
+            )}
           </div>
-
+ */}
           <li>
             <Link to="/contactUs">Contact Us</Link>
           </li>

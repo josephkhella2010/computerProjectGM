@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "../Navigation.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { BiArrowBack } from "react-icons/bi";
+import { IoMdArrowDropdown } from "react-icons/io";
 //import { IoMdArrowDropdown } from "react-icons/io";
 
 interface Props {
@@ -9,7 +10,7 @@ interface Props {
   setIsScroll: (isScroll: boolean) => void;
 }
 
-/* const menuArr = [
+const menuArr = [
   {
     mainLink: "About",
     subMenuLink: [
@@ -19,6 +20,7 @@ interface Props {
       { name: "Data Destruction", path: "/data-destruction" },
     ],
   },
+  /*
   {
     mainLink: "Services",
     subMenuLink: [
@@ -39,17 +41,18 @@ interface Props {
       { name: "Finance", path: "/finance-page" },
     ],
   },
-]; */
+  */
+];
 
 export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
   const [showMenu, setShowMenu] = useState<boolean>(false);
-  /*   const [showSubMenu, setShowSubMenu] = useState<boolean[]>(
-    Array(menuArr.length).fill(false)
+  const [showSubMenu, setShowSubMenu] = useState<boolean[]>(
+    Array(menuArr.length).fill(false),
   );
   const [containerHeights, setContainerHeights] = useState<number[]>(
-    Array(menuArr.length).fill(0)
-  ); */
-  // const subMenuRef = useRef<Array<HTMLDivElement | null>>([]);
+    Array(menuArr.length).fill(0),
+  );
+  const subMenuRef = useRef<Array<HTMLDivElement | null>>([]);
   const sideBarRef = useRef<HTMLDivElement>(null);
 
   const addClassActive = showMenu ? styles.active : "";
@@ -68,12 +71,12 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
     };
   }, [showMenu, setIsScroll]);
 
-  /*   useEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
       const heights = subMenuRef.current.map(
         (el) =>
           el?.querySelector(`.${styles.mobileMainSubmenuLowerSection}`)
-            ?.scrollHeight || 0
+            ?.scrollHeight || 0,
       );
       setContainerHeights(heights);
     };
@@ -92,7 +95,7 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
   };
   const closeSubMenu = () => {
     setShowSubMenu(Array(menuArr.length).fill(false));
-  }; */
+  };
 
   const adjustSidebarHeight = () => {
     if (!sideBarRef.current) return;
@@ -111,11 +114,11 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
 
   const closeMenu = () => {
     setShowMenu(false);
-    /*   setShowSubMenu(Array(menuArr.length).fill(false));
+    setShowSubMenu(Array(menuArr.length).fill(false));
     if (sideBarRef.current) {
       sideBarRef.current.style.height = "auto";
       sideBarRef.current.style.overflowY = "hidden";
-    } */
+    }
     document.body.style.overflow = "auto";
   };
 
@@ -172,7 +175,7 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
                     className={styles.subMenuMobileMainContainerSectionContent}
                   >
                     <div className={styles.mobileMainSubmenuConatainer}>
-                      {/*                   {menuArr.map((item, index) => (
+                      {menuArr.map((item, index) => (
                         <div
                           className={styles.mobileMainSubmenuSection}
                           key={index}
@@ -226,7 +229,7 @@ export default function MobileNavBar({ isScroll, setIsScroll }: Props) {
                             </ul>
                           </div>
                         </div>
-                      ))} */}
+                      ))}
                       <li
                         onClick={() => setShowMenu(false)}
                         className={styles.linksContainer}
