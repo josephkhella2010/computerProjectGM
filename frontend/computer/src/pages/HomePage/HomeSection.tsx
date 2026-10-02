@@ -6,10 +6,11 @@ import HomePageSecondContainer from "./childComponent/HomePageSecondContainer";
 import HomePageSeventhContainer from "./childComponent/HomePageSeventhContainer";
 import HomePageSixthContainer from "./childComponent/HomePageSixthContainer";
 import HomePageThirdContainer from "./childComponent/HomePageThirdContainer";
-import HomePageTrackContainer from "./childComponent/HomePageTrackContainer";
+//import HomePageTrackContainer from "./childComponent/HomePageTrackContainer";
 import RevealParent from "./childComponent/RevealParent";
 import TrackFoto from "./childComponent/TrackFoto";
 import TrackParent from "./childComponent/TrackParent";
+import TrackTitle from "./childComponent/TrackTitle";
 
 export default function HomeSection() {
   return (
@@ -28,26 +29,22 @@ export default function HomeSection() {
             <TrackFoto />
           </TrackParent>
         </div>
-
         {/*  track foto section */}
-
         <RevealParent direction="left">
           <HomePageSecondContainer />
         </RevealParent>
-
-        <HomePageTrackContainer />
-
+        {/*         <HomePageTrackContainer />
+         */}{" "}
+        <TrackTitle />
         <RevealParent direction="top">
           <HomePageThirdContainer />
         </RevealParent>
-
         <RevealParent direction="bottom">
           <HomePageFourthContainer />
         </RevealParent>
         <RevealParent direction="right">
           <HomePageFifthContainer />
         </RevealParent>
-
         <RevealParent direction="right">
           <HomePageSixthContainer />
         </RevealParent>

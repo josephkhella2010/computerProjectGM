@@ -630,6 +630,7 @@
     transform: translateX(-50%);
   }
 }
+
 @keyframes neonPulse {
   0% {
     text-shadow: 0 0 0 #4f93ff;
