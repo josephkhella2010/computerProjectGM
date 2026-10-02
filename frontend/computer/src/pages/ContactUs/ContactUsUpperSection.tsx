@@ -11,7 +11,7 @@ export default function ContactUsUpperSection() {
             reach us{" "}
           </p>
         </div>
-        <img src="Foto/contactUs.webp" />
+        <img src="Foto/contactUsFoto.jpg" alt="not found" />
       </div>
     </div>
   );
