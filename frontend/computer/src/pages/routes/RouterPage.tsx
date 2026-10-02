@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomeSection from "../HomePage/HomeSection";
 import NavigationSection from "../Navigation/NavigationSection";
 import ContactUsPage from "../ContactUs/ContactUsPage";
@@ -31,11 +31,11 @@ function AppRoutes() {
 
         <Route path="/aboutUs" element={<AboutUsMainPage />} />
         <Route path="/aboutUs" element={<AboutUsMainPage />} />
-       
+
         <Route path="/what-we-accept" element={<WhatAcceptPage />} />
         <Route path="/drop-off" element={<DropOffPage />} />
         <Route path="/data-destruction" element={<DataDestructionPage />} />
-         {/* 
+        {/* 
         <Route path="/government-page" element={<GovernmentPage />} />
         <Route path="/education-page" element={<EducationPage />} />
         <Route path="/medical-page" element={<MedicalPage />} />
