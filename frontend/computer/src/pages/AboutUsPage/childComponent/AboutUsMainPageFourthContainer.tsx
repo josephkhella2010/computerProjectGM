@@ -13,24 +13,20 @@ export default function AboutUsMainPageFourthContainer() {
         maximize our customer’s peace of mind.
       </p> */}
       <div className={styles.aboutUsMainPageFourthContainerLowerSection}>
-        <img src="/Foto/aboutUsThree.jpg" alt="aboutUsThree" />
+        <img src="/Foto/aboutUsPage4.jpg" alt="aboutUsThree" />
         <div className={styles.aboutUsMainPageFourthContainerLowerSectionText}>
-          {/*           <p>
-            We are committed to constantly growing, moving forward, and
-            improving every aspect of our promise. Quality of service and
-            convenience are a driving force of our work. In addition to that,
-            the health and safety for our workers and a commitment to the
-            environment are all founding values of our company. We want to earn
-            your trust as the number one provider of computer electronics
-            recycling services.
+          <p>
+            GM Computer Recycle provides secure and responsible electronics
+            recycling services for federal, state, and local government
+            agencies. We accept laptops, computers, servers, and other IT
+            equipment, helping agencies safely retire outdated technology.
           </p>
           <p>
-            Feel free to give us a call or email us if you have any questions
-            about our process or when we’re available,. In fact no detail is too
-            small for our team’s attention. We are committed to earn your trust
-            as the source for friendly, secure, and convenient computer
-            electronics recycling.
-          </p> */}
+            Our process focuses on data security, responsible recycling, and
+            environmental protection. GM Computer Recycle is committed to
+            providing government organizations with a trusted, professional, and
+            sustainable electronics recycling solution.
+          </p>
         </div>
       </div>
     </div>

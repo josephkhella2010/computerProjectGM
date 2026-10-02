@@ -13,30 +13,25 @@ export default function HomePageThirdContainer() {
         </div>
       </div>
       <div className={styles.homePageThirdContainerRightSection}>
-        {/* <h3> ABOUT US</h3>
         <h2> ABOUT gm computer recycle</h2>
         <p>
-          In the heart of our mission at GM Computer Recycle lies a fervent
-          dedication to environmental stewardship and community empowerment.
-          With years of expertise in electronic recycling, we stand as a beacon
-          of sustainability, providing responsible IT disposal solutions for
-          individuals, businesses, and institutions alike. Our state-of-the-art
-          facilities are equipped to handle electronic waste with precision and
-          care, ensuring that every device is recycled in an eco-friendly
-          manner. Beyond mere recycling, we believe in the transformative power
-          of education and engagement.
+          At GM Computer Recycle, our mission is to make electronics recycling
+          simple, responsible, and environmentally conscious. With years of
+          experience in electronic recycling, we provide reliable solutions for
+          businesses, organizations, government agencies, and individuals
+          looking to properly dispose of unwanted computers, laptops, servers,
+          and other electronic equipment. We focus on responsible handling, data
+          security, and environmentally responsible recycling practices.
         </p>
         <p>
-          At GM Computer Recycle, our commitment goes beyond just recycling; it
-          extends to building a more sustainable and inclusive world. We
-          understand that electronic waste is a global challenge with local
-          impacts, which is why we work closely with communities to tailor our
-          solutions to their unique needs. Whether it's organizing electronic
-          waste collection events or providing resources for responsible
-          disposal, we are dedicated to making a positive difference at every
-          level.
+          Our commitment goes beyond collecting and recycling electronics. We
+          work with our customers to provide convenient recycling solutions that
+          help reduce electronic waste and keep valuable materials out of
+          landfills. From business cleanouts and IT equipment recycling to
+          community recycling events, GM Computer Recycle is dedicated to
+          providing professional service while supporting a cleaner and more
+          sustainable future.
         </p>
-        */}
       </div>
     </div>
   );

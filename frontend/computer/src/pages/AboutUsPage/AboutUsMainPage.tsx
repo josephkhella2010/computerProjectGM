@@ -1,4 +1,5 @@
 import styles from "./AboutUsMainPage.module.css";
+import AboutUsMainPageBrContainer from "./childComponent/AboutUsMainPageBrContainer";
 import AboutUsMainPageFifthContainer from "./childComponent/AboutUsMainPageFifthContainer";
 import AboutUsMainPageFourthContainer from "./childComponent/AboutUsMainPageFourthContainer";
 import AboutUsMainPageSecondSection from "./childComponent/AboutUsMainPageSecondSection";
@@ -15,6 +16,7 @@ export default function AboutUsMainPage() {
           <AboutUsMainPageThirdContainer />
           <AboutUsMainPageFourthContainer />
           <AboutUsMainPageFifthContainer />
+          <AboutUsMainPageBrContainer />
           <AboutUsMainPageSixthContainer />
         </div>
       </div>
