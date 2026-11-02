@@ -9,16 +9,16 @@ export default function AboutUsPage() {
           <ul>
             <h4>Links</h4>
             <li>
-              <a href="/#/">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
               {" "}
-              <a href="/#/aboutUs">About us</a>
+              <a href="/aboutUs">About us</a>
             </li>
 
             <li>
               {" "}
-              <a href="/#/contactUs">Contact Us</a>
+              <a href="/contactUs">Contact Us</a>
             </li>
           </ul>
 
